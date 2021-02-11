@@ -27,11 +27,59 @@ options:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 8]
+    coordinate: [7, 8]
     rotation: 0
     state: enabled
 
 blocks:
+- name: A
+  id: variable
+  parameters:
+    comment: ''
+    value: '440'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [348, 60]
+    rotation: 0
+    state: enabled
+- name: C
+  id: variable
+  parameters:
+    comment: ''
+    value: '262'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [348, 457]
+    rotation: 0
+    state: enabled
+- name: F
+  id: variable
+  parameters:
+    comment: ''
+    value: '349'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [347, 218]
+    rotation: 0
+    state: enabled
+- name: num_notes
+  id: variable
+  parameters:
+    comment: ''
+    value: '3'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [895, 238]
+    rotation: 0
+    state: enabled
 - name: samp_rate
   id: variable
   parameters:
@@ -41,51 +89,165 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [184, 12]
+    coordinate: [39, 93]
     rotation: 0
-    state: enabled
+    state: true
+- name: samples_per_symbol
+  id: variable
+  parameters:
+    comment: ''
+    value: '200'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [194, 17]
+    rotation: 0
+    state: true
 - name: analog_sig_source_x_0
   id: analog_sig_source_x
   parameters:
     affinity: ''
     alias: ''
-    amp: '1'
+    amp: '.99'
     comment: ''
-    freq: '196'
+    freq: F
     maxoutbuf: '0'
     minoutbuf: '0'
     offset: '0'
     phase: '0'
     samp_rate: samp_rate
     type: float
-    waveform: analog.GR_SIN_WAVE
+    waveform: analog.GR_COS_WAVE
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [383, 269]
+    coordinate: [469, 177]
     rotation: 0
     state: true
-- name: blocks_wavfile_sink_1
+- name: analog_sig_source_x_1
+  id: analog_sig_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '.99'
+    comment: ''
+    freq: C
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate
+    type: float
+    waveform: analog.GR_COS_WAVE
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [470, 426]
+    rotation: 0
+    state: true
+- name: analog_sig_source_x_2
+  id: analog_sig_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '.99'
+    comment: ''
+    freq: A
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate
+    type: float
+    waveform: analog.GR_COS_WAVE
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [482, 19]
+    rotation: 0
+    state: true
+- name: blocks_add_xx_0
+  id: blocks_add_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: num_notes
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [745, 271]
+    rotation: 0
+    state: enabled
+- name: blocks_multiply_const_vxx_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: 1/num_notes
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [901, 387]
+    rotation: 0
+    state: true
+- name: blocks_multiply_xx_0
+  id: blocks_multiply_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: num_notes
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [907, 89]
+    rotation: 0
+    state: disabled
+- name: blocks_wavfile_sink_0
   id: blocks_wavfile_sink
   parameters:
     affinity: ''
     alias: ''
     bits_per_sample: '8'
     comment: ''
-    file: /ad/eng/users/k/r/kremerme/Desktop/ec415/output_Feb_11.wav
+    file: /ad/eng/users/k/r/kremerme/Desktop/ec415/ec415/lab1/sin.wav
     nchan: '1'
-    samp_rate: samp_rate
+    samp_rate: '32000'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [805, 296]
+    coordinate: [1102, 307]
     rotation: 0
     state: true
 
 connections:
-- [analog_sig_source_x_0, '0', blocks_wavfile_sink_1, '0']
+- [analog_sig_source_x_0, '0', blocks_add_xx_0, '1']
+- [analog_sig_source_x_1, '0', blocks_add_xx_0, '2']
+- [analog_sig_source_x_2, '0', blocks_add_xx_0, '0']
+- [blocks_add_xx_0, '0', blocks_multiply_const_vxx_0, '0']
+- [blocks_multiply_const_vxx_0, '0', blocks_wavfile_sink_0, '0']
 
 metadata:
   file_format: 1
