@@ -1,5 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the beggining of this LaTeX document that serves as 
+% Homework Template for EC415, Spring 2019. The template was 
+% created by Natasa Trkulja (ntrkulja@bu.edu) and 
+% Prof. David Starobinski (staro@bu.edu). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
-
+% Packages
 \usepackage{fancyhdr}
 \usepackage{extramarks}
 \usepackage{amsmath}
@@ -13,6 +19,10 @@
 \usepackage{listings}
 \usepackage[numbered,framed]{matlab-prettifier}
 \usepackage{hyperref}
+
+%\usepackage[demo]{graphicx}
+%\usepackage{caption}
+\usepackage{subcaption}
 
 \usetikzlibrary{automata,positioning}
 
@@ -81,18 +91,6 @@
 %    \exitProblemHeader{homeworkProblemCounter}
 %}
 
-
-
-%
-% Homework Details
-%   - Title
-%   - Due date
-%   - Class
-%   - Section/Time
-%   - Instructor
-%   - Author
-%
-
 \newcommand{\hmwkTitle}{Homework  2} % Be sure to update this as needed!
 \newcommand{\hmwkDueDate}{Friday 03/05/2021 6:00PM} % Be sure to update this as needed!
 \newcommand{\hmwkClass}{EC 415}
@@ -117,135 +115,295 @@
 
 %\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
 
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Various Helper Commands
-%
-
-% Useful for algorithms
-\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
-
-% For derivatives
-\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
-
-% For partial derivatives
-\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
-
-% Integral dx
-\newcommand{\dx}{\mathrm{d}x}
-
-% Alias for the Solution section header
-\newcommand{\solution}{\textbf{\large Solution}}
-
-% Probability commands: Expectation, Variance, Covariance, Bias
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Bias}{\mathrm{Bias}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}   % Useful for algorithms
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)} % For derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}  % For partial derivatives
+\newcommand{\dx}{\mathrm{d}x}                               % Integral dx
+\newcommand{\solution}{\textbf{\large Solution}}            % Alias for the Solution section header
+\newcommand{\E}{\mathrm{E}}                                 % Probability commands: Expectation, 
+\newcommand{\Var}{\mathrm{Var}}                             %                       Variance,
+\newcommand{\Cov}{\mathrm{Cov}}                             %                       Covariance,
+\newcommand{\Bias}{\mathrm{Bias}}                           %                       Bias
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT REMOVE ANYTHING ABOVE THIS POINT. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%DO NOT REMOVE ANYTHING ABOVE THIS POINT. 
-
-%This is the beggining of this LaTeX document that serves as Homework Template for EC415, Spring 2019. The template was created by Natasa Trkulja (ntrkulja@bu.edu) and Prof. David Starobinski (staro@bu.edu). 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN & TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
 \maketitle
-
 \pagebreak
 
-%% Listing the question is optional
-%% Providing the solution is required
-
-% HW2 lets go
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.1}
 
-Use specsquare.m to investigate the relationship between the time behavior of the square wave and its spectrum. The Matlab command zoom on is often helpful for viewing details of the plots.
+Use specsquare.m to investigate the relationship between the time behavior of the square wave and its spectrum. The Matlab command zoom on is often helpful for viewing details of the plots. 
 
-\begin{enumerate}
+\begin{enumerate}[label=\alph*.]
 \item Try square waves with different frequencies: f=20, 40, 100, 300 Hz. How do the time plots change? How do the spectra change?
 \item Try square waves of different lengths, time=1, 10, 100 seconds. How does the spectrum change in each case?
-\item Try different sampling times, $T_s$=1/100, 1/10000 seconds. How does the spectrum change in each case?
-\end{enumerate}
+\item Try different sampling times, $T_s$=1/100, 1/10000 seconds. How does the spectrum change in each case? \\
+\end{enumerate} 
 
+%%%%%%%%%%%%%%
+% SOLUTION 3.1
+%%%%%%%%%%%%%%
 \solution
 
-%\lstinputlisting[caption = {Sample code from Matlab}, language = Matlab]{modulate.m} % \lstinputlisting allows you to input Matlab code from a file.
+To obtain all solutions to this exercise, a copy of the provided specsquare.m was used. For each part of the exercise, the relevant variable was changed before re-running the script and generating a plot.
 
-\begin{enumerate}
-\item TODO
+\lstinputlisting[caption = {MATLAB code for Exercise 3.1}, language = Matlab]{specsquare.m} % \lstinputlisting allows you to input Matlab code from a file.
+
+\begin{enumerate}[label=\alph*.]
+
+\item As the frequency increases, the density of square waves on the time plot increases. TODO how do the spectra change
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+ 		\includegraphics[width=.9\textwidth]{p3_1a20}
+  		\caption{f=20Hz}
+  		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\textwidth]{p3_1a40}
+  		\caption{f=40Hz}
+  		\label{fig:sub2}
+	\end{subfigure}
+	\label{fig:test}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+ 		\includegraphics[width=.9\textwidth]{p3_1a100}
+  		\caption{f=100Hz}
+  		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\textwidth]{p3_1a300}
+  		\caption{f=300Hz}
+  		\label{fig:sub2}
+	\end{subfigure}
+	\caption{square waves of increasing frequency}
+	\label{fig:test}
+\end{figure}
+
 \item As the length of time increases, the magnitude of the spectra increases.
-\item As the sampling time decreases, the sampling frequency increases. This means the spectrum plot is a more complete picture with more plotted spectra. However, this does not change the actual shape of the spectrum.
-\end{enumerate}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.33\textwidth}
+  		\centering
+ 		\includegraphics[width=.9\textwidth]{p3_1b1}
+  		\caption{t=1sec}
+  		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.33\textwidth}
+  		\centering
+  		\includegraphics[width=.9\textwidth]{p3_1b10}
+  		\caption{t=10sec}
+  		\label{fig:sub2}
+	\end{subfigure}%
+	\begin{subfigure}{.33\textwidth}
+  		\centering
+ 		\includegraphics[width=.9\textwidth]{p3_1b100}
+  		\caption{t=100sec}
+ 		\label{fig:sub3}
+	\end{subfigure}
+	\caption{longer running square waves.}
+	\label{fig:test}
+\end{figure}
 
+
+\item As the sampling time decreases, the sampling frequency increases. This means the spectrum plot is a more complete picture with more plotted spectra. However, this does not change the actual shape of the spectrum.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+ 		\includegraphics[width=.9\textwidth]{p3_1c100}
+  		\caption{$T_s$=1/100}
+  		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\textwidth]{p3_1c10000}
+  		\caption{$T_s$=1/10000}
+  		\label{fig:sub2}
+	\end{subfigure}
+	\caption{square waves of increasing sample rate}
+	\label{fig:test}
+\end{figure}
+\end{enumerate}
+\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.3}
 
 Mimic the code in specsquare.m to find the spectrum of:
-\begin{enumerate}
-\item An exponential pulse \( s(t) = e^{-t} \) for \( 0 < t < 10\)
-\item A scaled exponential pulse \( s(t) = 5e^{-t} \) for \( 0 < t < 10\)
-\item A Gaussian pulse \( s(t) = e^{-t^2} \) for \( -2 < t < 2\)
-\item A Gaussian pulse \( s(t) = e^{-t^2} \) for \( -20 < t < 20\)
-\item The sinusoids \( s(t) = sin(2\pi ft + \phi )\) for \(f = 20, 100, 1000\) with \(\phi = 0, \pi /4, \pi /2\) and \( 0 < t < 10 \)
+\begin{enumerate}[label=\alph*.]
+	\item An exponential pulse \( s(t) = e^{-t} \) for \( 0 < t < 10\)
+	\item A scaled exponential pulse \( s(t) = 5e^{-t} \) for \( 0 < t < 10\)
+	\item A Gaussian pulse \( s(t) = e^{-t^2} \) for \( -2 < t < 2\)
+	\item A Gaussian pulse \( s(t) = e^{-t^2} \) for \( -20 < t < 20\)
+	\item The sinusoids \( s(t) = sin(2\pi ft + \phi )\) for \(f = 20, 100, 1000\) with \(\phi = 0, \pi /4, \pi /2\) and \( 0 < t < 10 \) \\
 \end{enumerate}
 
+%%%%%%%%%%%%%%
+% SOLUTION 3.3
+%%%%%%%%%%%%%%
 \solution
 
-soln here
+\begin{enumerate}[label=\alph*.]
+\item Here is the MATLAB code:
+\lstinputlisting[caption = {MATLAB code for part a}, language = Matlab]{p3_3a.m} 
+The resulting plot is shown in the figure below.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{p3_3a} 
+\caption{p3.3a d}
+\end{figure}
+\item Here is the MATLAB code:
+\lstinputlisting[caption = {MATLAB code for part b}, language = Matlab]{p3_3b.m}
+The resulting plot is shown in the figure below.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{p3_3b} 
+\caption{p3.3b}
+\end{figure}
+\item Here is the MATLAB code:
+\lstinputlisting[caption = {MATLAB code for part c}, language = Matlab]{p3_3c.m}
+The resulting plot is shown in the figure below.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{p3_3c} 
+\caption{p3.3c}
+\end{figure}
+\item Here is the MATLAB code:
+\lstinputlisting[caption = {MATLAB code for part d}, language = Matlab]{p3_3d.m} 
+The resulting plot is shown in the figure below.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{p3_3d} 
+\caption{p3.3d}
+\end{figure}
+\item Here is the MATLAB code: TODO
+\end{enumerate}
+\pagebreak
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.6}
 
 Mimic the code in speccos.m to find the spectrum of a cosine wave
-\begin{enumerate}
-\item For different frequencies f=1, 2, 20, 30 Hz, b. for different phases $\phi$ = 0, 0.1, $\pi$/8, $\pi$/2 radians,
+\begin{enumerate}[label=\alph*.]
+\item For different frequencies f=1, 2, 20, 30 Hz, b. for different phases $\phi$ = 0, 0.1, $\pi$/8, $\pi$/2 radians
 \item For different sampling rates $T_s$=1/10, 1/1000, 1/100000.
 \end{enumerate}
 
+%%%%%%%%%%%%%%
+% SOLUTION 3.6
+%%%%%%%%%%%%%%
 \solution
 
-soln here
+\begin{enumerate}[label=\alph*.]
+\item A
+\item B
+\end{enumerate}
+\pagebreak
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.9}
 
 Mimic the code in filternoise.m to create a filter that
-\begin{enumerate}
+\begin{enumerate}[label=\alph*.]
 \item Passes all frequencies above 500 Hz
 \item Passes all frequencies below 3000 Hz
 \item Rejects all frequencies between 1500 and 2500 Hz
 \end{enumerate}
 
+%%%%%%%%%%%%%%
+% SOLUTION 3.9
+%%%%%%%%%%%%%%
 \solution
 
-soln here
+\begin{enumerate}[label=\alph*.]
+\item A
+\item B
+\item C
+\end{enumerate}
+\pagebreak
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.10}
 
 Change the sampling rate to $T_s$=1/20000. Redesign the three filters from Exercise 3.9.
 
+%%%%%%%%%%%%%%%
+% SOLUTION 3.10
+%%%%%%%%%%%%%%%
 \solution
 
 soln here
+\pagebreak
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.11
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.11}
 
 Let $x_1(t)$ be a cosine wave of frequency f = 800, $x_2(t)$ be a cosine wave of frequency f = 2000, and $x_3(t)$ be a cosine wave of frequency f = 4500. Let \(x(t) = x_1(t) + 0.5 * x_2(t) + 2 * x_3(t)\). Use x(t) as input to each of the three filters in filternoise.m. Plot the spectra, and explain what you see.
 
+%%%%%%%%%%%%%%%
+% SOLUTION 3.11
+%%%%%%%%%%%%%%%
 \solution
 
 soln here
+\pagebreak
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.26
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.26}
 
 Mimic the code in modulate.m to find the spectrum of the output y(t) of a modulator block (with modulation frequency $f_c$ = 1000 Hz) when
-\begin{enumerate}
+\begin{enumerate}[label=\alph*.]
 \item The input is \(x(t) = cos(2*\pi*f_1*t) + cos(2*\pi*f_2*t)\) for $f_1$ = 100 and $f_2$ = 150 Hz
 \item The input is a square wave with fundamental f = 150 Hz
 \item The input is a noise signal with all energy below 300 Hz
 \end{enumerate}
 
+%%%%%%%%%%%%%%%
+% SOLUTION 3.26
+%%%%%%%%%%%%%%%
 \solution
 
-soln here
+\begin{enumerate}[label=\alph*.]
+\item A
+\item B
+\item C
+\end{enumerate}
+\pagebreak
 
 
 

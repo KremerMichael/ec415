@@ -1,0 +1,265 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[numbered,framed]{matlab-prettifier}
+\usepackage{hyperref}
+
+\usetikzlibrary{automata,positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\rhead{\hmwkClass\ (\hmwkClassInstructor): \hmwkTitle}
+%\rhead{\firstxmark}
+%\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+%\newcommand{\enterProblemHeader}[1]{
+%    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%}
+%
+%\newcommand{\exitProblemHeader}[1]{
+%    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%    \stepcounter{#1}
+%    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+%}
+
+%\setcounter{secnumdepth}{0}
+%\newcounter{partCounter}
+%\newcounter{homeworkProblemCounter}
+%\setcounter{homeworkProblemCounter}{1}
+%\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this template for an
+% example.
+%
+%\newenvironment{homeworkProblem}[1][-1]{
+%    \ifnum#1>0
+%        \setcounter{homeworkProblemCounter}{#1}
+%    \fi
+%    \section{Problem \arabic{homeworkProblemCounter}}
+%    \setcounter{partCounter}{1}
+%    \enterProblemHeader{homeworkProblemCounter}
+%}{
+%    \exitProblemHeader{homeworkProblemCounter}
+%}
+
+
+
+%
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+\newcommand{\hmwkTitle}{Homework  Fill Number} % Be sure to update this as needed!
+\newcommand{\hmwkDueDate}{Fill Date} % Be sure to update this as needed!
+\newcommand{\hmwkClass}{EC 415}
+\newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{Professor David Starobinski}
+\newcommand{\hmwkAuthorName}{Your Name} % Be sure to update this!
+\newcommand{\hmwkKerberosName}{yourusername@bu.edu} % Be sure to update this!
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ by\ \hmwkDueDate\ }\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName} \\* \hmwkKerberosName}
+\date{}
+
+%\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%
+% Various Helper Commands
+%
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+
+
+%DO NOT REMOVE ANYTHING ABOVE THIS POINT. 
+
+%This is the beggining of this LaTeX document that serves as Homework Template for EC415, Spring 2019. The template was created by Natasa Trkulja (ntrkulja@bu.edu) and Prof. David Starobinski (staro@bu.edu). 
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+%% Listing the question is optional
+%% Providing the solution is required
+
+\section*{Problem 1}
+
+What is Wi-Fi? What frequencies does it operate on? List out various 802.11 protocols and their respective frequencies and data rates. Finally, specify three factors that contribute to the weakening of Wi-Fi signals as they propagate in space. \\
+
+\solution
+
+\textbf{Wi-Fi} is technology for radio wireless local area networking of devices based on the IEEE 802.11 standards. \textit{Wi-Fi} is a trademark of the Wi-Fi Alliance, which restricts the use of the term \textit{Wi-Fi Certified} to products that successfully complete interoperability certification testing.\footnote{ "What is Wi-Fi (IEEE 802.11x)? A Webopedia Definition", \url{https://www.webopedia.com/TERM/W/Wi_Fi.html}} \\
+
+Wi-Fi operates on the following frequencies:
+\begin{itemize} % You can use \begin{itemize} to list items.
+\item 2.4 GHz
+\item 5 GHz
+\item 60 GHz
+\end{itemize}
+
+The table below lists out different Wi-Fi protocols, the frequency on which they operate and data rates associated with them.\footnote{"Downloading the newest Wi-Fi protocols: 802.11ax and 802.11ay explained", \url{https://arstechnica.com/gadgets/2018/11/802-eleventy-which-802-11ax-and-802-11ay-explained/}}
+
+\begin{center}
+\begin{tabular}{ |c|c|c| } % \begin{tabular} is used for tables. Each |c| stands for a single column. |c|c|c| creates a table with 3 columns.
+ \hline % hline creates a lines between two rows.
+ \textbf{Designation} & \textbf{Spectrum} & \textbf{single-MIMO PHY} \\
+ \hline
+ 802.11a & 5 GHz & 54 Mbps \\
+ 802.11b & 2.4 GHz & 11 Mbps \\	
+ 802.11g & 2.4 GHz & 54 Mbps \\	
+ 802.11n & 2.4 GHz / 5 GHz & 144 Mbps / 300 Mbps \\
+ 802.11ac & 5 GHz & 433 Mbps \\
+ 802.11ad & 60 GHz & ~5 Gbps \\	
+ 802.11ax (draft) & 2.4 GHz / 5 GHz & ~500 Mbps	\\
+ 802.11ay (draft) & 60 GHz & ~ 40 Gbps \\
+ \hline
+\end{tabular}
+\end{center}
+
+The three concepts that explain weakening of the Wi-Fi signal strength as it propagates in space are:
+\begin{enumerate} % \begin{enumerate} can be used for numbered lists
+\item Path loss
+\item Shadowing
+\item Multipath fading
+\end{enumerate}
+
+
+\section*{Problem 2}
+
+Find the Fourier Transform of the rectangular pulse: 
+
+% \begin{equation} is used for typing equations.
+\begin{equation} 
+\Pi(t) =
+	\begin{cases}
+      1, & -T/2 \leq t \leq T/2 \\
+      0, & \text{otherwise}
+    \end{cases}
+\end{equation} 
+
+\pagebreak % Use this when and where needed.
+
+\solution 
+
+The Fourier Transform of the rectangular pulse is calculated in the following manner:
+
+\begin{equation}
+\begin{split}
+W(f) = \int_{t = -\infty}^{\infty} \Pi (t)e^{-j2\pi ft} \:dt = \int_{t = -T/2}^{T/2} (1)e^{-j2\pi ft} \:dt = \frac{e^{-j2\pi ft}}{-j2\pi f}\bigg\vert_{t = -T/2}^{T/2} \\  
+= \frac{e^{-j\pi fT} - e^{j\pi fT}}{-j2\pi f} = T\frac{\sin(\pi fT)}{\pi fT} \equiv T\mbox{sinc} (fT)
+\end{split}
+\end{equation}
+
+% Note that \: creates a space.
+
+\section*{Problem 3}
+
+Write a Matlab code to upconvert an input sine signal (frequency $f_i$) to a higher frequency ($f_c$) of a carrier so that it can more easily propagate over long distances and plot the result. Be sure to also plot the input and the carrier signal. \\
+
+\solution 
+
+Here is the Matlab code: 
+
+\lstinputlisting[caption = {Sample code from Matlab}, language = Matlab]{modulate.m} % \lstinputlisting allows you to input Matlab code from a file.
+
+The resulting plots are shown in the figures below.
+
+% This is how you insert figures. \begin{figure}[H] is going to put the figure at the exact location of the Latex code, but you can also choose to put it on the top of the page by using \begin{figure}[t], bottom by using  \begin{figure}[b], etc. See for more: https://www.overleaf.com/learn/latex/Inserting_Images
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{carrier} % {...} is the name of your file, no extension needed. I named my image carrier in this instance and used .png extension, but .jpg also works.
+\caption{Carrier signal}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{input}
+\caption{Input signal}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{output}
+\caption{Output signal}
+\end{figure}
+ 
+
+\vspace{5mm} %5mm vertical space, use as needed.
+
+
+
+\end{document}
