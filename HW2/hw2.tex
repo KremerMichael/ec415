@@ -5,7 +5,7 @@
 % Prof. David Starobinski (staro@bu.edu). 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
-% Packages
+% PACKAGES
 \usepackage{fancyhdr}
 \usepackage{extramarks}
 \usepackage{amsmath}
@@ -19,9 +19,6 @@
 \usepackage{listings}
 \usepackage[numbered,framed]{matlab-prettifier}
 \usepackage{hyperref}
-
-%\usepackage[demo]{graphicx}
-%\usepackage{caption}
 \usepackage{subcaption}
 
 \usetikzlibrary{automata,positioning}
@@ -71,25 +68,6 @@
 %\newcounter{homeworkProblemCounter}
 %\setcounter{homeworkProblemCounter}{1}
 %\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
-
-%
-% Homework Problem Environment
-%
-% This environment takes an optional argument. When given, it will adjust the
-% problem counter. This is useful for when the problems given for your
-% assignment aren't sequential. See the last 3 problems of this template for an
-% example.
-%
-%\newenvironment{homeworkProblem}[1][-1]{
-%    \ifnum#1>0
-%        \setcounter{homeworkProblemCounter}{#1}
-%    \fi
-%    \section{Problem \arabic{homeworkProblemCounter}}
-%    \setcounter{partCounter}{1}
-%    \enterProblemHeader{homeworkProblemCounter}
-%}{
-%    \exitProblemHeader{homeworkProblemCounter}
-%}
 
 \newcommand{\hmwkTitle}{Homework  2} % Be sure to update this as needed!
 \newcommand{\hmwkDueDate}{Friday 03/05/2021 6:00PM} % Be sure to update this as needed!
@@ -147,9 +125,9 @@
 Use specsquare.m to investigate the relationship between the time behavior of the square wave and its spectrum. The Matlab command zoom on is often helpful for viewing details of the plots. 
 
 \begin{enumerate}[label=\alph*.]
-\item Try square waves with different frequencies: f=20, 40, 100, 300 Hz. How do the time plots change? How do the spectra change?
-\item Try square waves of different lengths, time=1, 10, 100 seconds. How does the spectrum change in each case?
-\item Try different sampling times, $T_s$=1/100, 1/10000 seconds. How does the spectrum change in each case? \\
+	\item Try square waves with different frequencies: f=20, 40, 100, 300 Hz. How do the time plots change? How do the spectra change?
+	\item Try square waves of different lengths, time=1, 10, 100 seconds. How does the spectrum change in each case?
+	\item Try different sampling times, $T_s$=1/100, 1/10000 seconds. How does the spectrum change in each case? \\
 \end{enumerate} 
 
 %%%%%%%%%%%%%%
@@ -159,89 +137,88 @@ Use specsquare.m to investigate the relationship between the time behavior of th
 
 To obtain all solutions to this exercise, a copy of the provided specsquare.m was used. For each part of the exercise, the relevant variable was changed before re-running the script and generating a plot.
 
-\lstinputlisting[caption = {MATLAB code for Exercise 3.1}, language = Matlab]{specsquare.m} % \lstinputlisting allows you to input Matlab code from a file.
+\lstinputlisting[caption = {MATLAB code for Exercise 3.1}, language = Matlab]{specsquare.m}
 
 \begin{enumerate}[label=\alph*.]
 
-\item As the frequency increases, the density of square waves on the time plot increases. TODO how do the spectra change
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}{.5\textwidth}
-  		\centering
- 		\includegraphics[width=.9\textwidth]{p3_1a20}
-  		\caption{f=20Hz}
-  		\label{fig:sub1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-  		\centering
-  		\includegraphics[width=.9\textwidth]{p3_1a40}
-  		\caption{f=40Hz}
-  		\label{fig:sub2}
-	\end{subfigure}
-	\label{fig:test}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}{.5\textwidth}
-  		\centering
- 		\includegraphics[width=.9\textwidth]{p3_1a100}
-  		\caption{f=100Hz}
-  		\label{fig:sub1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-  		\centering
-  		\includegraphics[width=.9\textwidth]{p3_1a300}
-  		\caption{f=300Hz}
-  		\label{fig:sub2}
-	\end{subfigure}
-	\caption{square waves of increasing frequency}
-	\label{fig:test}
-\end{figure}
+	\item As the frequency increases, the density of square waves on the time plot increases. TODO how do the spectra change
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_1a20}
+  			\caption{f=20Hz}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_1a40}
+  			\caption{f=40Hz}
+  			\label{fig:sub2}
+		\end{subfigure}
+		\label{fig:test}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_1a100}
+  			\caption{f=100Hz}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_1a300}
+  			\caption{f=300Hz}
+  			\label{fig:sub2}
+		\end{subfigure}
+		\caption{square waves of increasing frequency}
+		\label{fig:test}
+	\end{figure}
 
-\item As the length of time increases, the magnitude of the spectra increases.
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}{.33\textwidth}
-  		\centering
- 		\includegraphics[width=.9\textwidth]{p3_1b1}
-  		\caption{t=1sec}
-  		\label{fig:sub1}
-	\end{subfigure}%
-	\begin{subfigure}{.33\textwidth}
-  		\centering
-  		\includegraphics[width=.9\textwidth]{p3_1b10}
-  		\caption{t=10sec}
-  		\label{fig:sub2}
-	\end{subfigure}%
-	\begin{subfigure}{.33\textwidth}
-  		\centering
- 		\includegraphics[width=.9\textwidth]{p3_1b100}
-  		\caption{t=100sec}
- 		\label{fig:sub3}
-	\end{subfigure}
-	\caption{longer running square waves.}
-	\label{fig:test}
-\end{figure}
+	\item As the length of time increases, the magnitude of the spectra increases.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_1b1}
+  			\caption{t=1sec}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_1b10}
+  			\caption{t=10sec}
+  			\label{fig:sub2}
+		\end{subfigure}%
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_1b100}
+  			\caption{t=100sec}
+ 			\label{fig:sub3}
+		\end{subfigure}
+		\caption{longer running square waves.}
+		\label{fig:test}
+	\end{figure}
 
-
-\item As the sampling time decreases, the sampling frequency increases. This means the spectrum plot is a more complete picture with more plotted spectra. However, this does not change the actual shape of the spectrum.
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}{.5\textwidth}
-  		\centering
- 		\includegraphics[width=.9\textwidth]{p3_1c100}
-  		\caption{$T_s$=1/100}
-  		\label{fig:sub1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-  		\centering
-  		\includegraphics[width=.9\textwidth]{p3_1c10000}
-  		\caption{$T_s$=1/10000}
-  		\label{fig:sub2}
-	\end{subfigure}
-	\caption{square waves of increasing sample rate}
-	\label{fig:test}
-\end{figure}
+	\item As the sampling time decreases, the sampling frequency increases. This means the spectrum plot is a more complete picture with more plotted spectra. However, this does not change the actual shape of the spectrum.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_1c100}
+  			\caption{$T_s$=1/100}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_1c10000}
+  			\caption{$T_s$=1/10000}
+  			\label{fig:sub2}
+		\end{subfigure}
+		\caption{square waves of increasing sample rate}
+		\label{fig:test}
+	\end{figure}
 \end{enumerate}
 \pagebreak
 
@@ -266,39 +243,43 @@ Mimic the code in specsquare.m to find the spectrum of:
 \solution
 
 \begin{enumerate}[label=\alph*.]
-\item Here is the MATLAB code:
-\lstinputlisting[caption = {MATLAB code for part a}, language = Matlab]{p3_3a.m} 
-The resulting plot is shown in the figure below.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{p3_3a} 
-\caption{p3.3a d}
-\end{figure}
-\item Here is the MATLAB code:
-\lstinputlisting[caption = {MATLAB code for part b}, language = Matlab]{p3_3b.m}
-The resulting plot is shown in the figure below.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{p3_3b} 
-\caption{p3.3b}
-\end{figure}
-\item Here is the MATLAB code:
-\lstinputlisting[caption = {MATLAB code for part c}, language = Matlab]{p3_3c.m}
-The resulting plot is shown in the figure below.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{p3_3c} 
-\caption{p3.3c}
-\end{figure}
-\item Here is the MATLAB code:
-\lstinputlisting[caption = {MATLAB code for part d}, language = Matlab]{p3_3d.m} 
-The resulting plot is shown in the figure below.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{p3_3d} 
-\caption{p3.3d}
-\end{figure}
-\item Here is the MATLAB code: TODO
+	\item Here is the MATLAB code:
+	\lstinputlisting[caption = {MATLAB code for part a}, language = Matlab]{p3_3a.m} 
+	The resulting plot is shown in the figure below.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{p3_3a} 
+	\caption{p3.3a d}
+	\end{figure}
+	
+	\item Here is the MATLAB code:
+	\lstinputlisting[caption = {MATLAB code for part b}, language = Matlab]{p3_3b.m}
+	The resulting plot is shown in the figure below.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{p3_3b} 
+		\caption{p3.3b}
+	\end{figure}
+	
+	\item Here is the MATLAB code:
+	\lstinputlisting[caption = {MATLAB code for part c}, language = Matlab]{p3_3c.m}
+	The resulting plot is shown in the figure below.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{p3_3c} 
+		\caption{p3.3c}
+	\end{figure}
+	
+	\item Here is the MATLAB code:
+	\lstinputlisting[caption = {MATLAB code for part d}, language = Matlab]{p3_3d.m} 
+	The resulting plot is shown in the figure below.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{p3_3d} 
+		\caption{p3.3d}
+	\end{figure}
+	
+	\item Here is the MATLAB code: TODO
 \end{enumerate}
 \pagebreak
 
@@ -309,8 +290,9 @@ The resulting plot is shown in the figure below.
 
 Mimic the code in speccos.m to find the spectrum of a cosine wave
 \begin{enumerate}[label=\alph*.]
-\item For different frequencies f=1, 2, 20, 30 Hz, b. for different phases $\phi$ = 0, 0.1, $\pi$/8, $\pi$/2 radians
-\item For different sampling rates $T_s$=1/10, 1/1000, 1/100000.
+	\item For different frequencies f=1, 2, 20, 30 Hz
+	\item for different phases $\phi$ = 0, 0.1, $\pi$/8, $\pi$/2 radians
+	\item For different sampling rates $T_s$=1/10, 1/1000, 1/100000.
 \end{enumerate}
 
 %%%%%%%%%%%%%%
@@ -318,9 +300,105 @@ Mimic the code in speccos.m to find the spectrum of a cosine wave
 %%%%%%%%%%%%%%
 \solution
 
+To obtain all solutions to this exercise, a copy of the provided speccos.m was used. For each part of the exercise, the relevant variable was changed before re-running the script and generating a plot.
+
+\lstinputlisting[caption = {MATLAB code for Exercise 3.6}, language = Matlab]{speccos.m}
+
 \begin{enumerate}[label=\alph*.]
-\item A
-\item B
+	\item A
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_6a1}
+  			\caption{f=1Hz}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_6a2}
+  			\caption{f=2Hz}
+  			\label{fig:sub2}
+		\end{subfigure}
+		\label{fig:test}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_6a20}
+  			\caption{f=20Hz}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_6a30}
+  			\caption{f=30Hz}
+  			\label{fig:sub2}
+		\end{subfigure}
+		\caption{square waves of increasing frequency}
+		\label{fig:test}
+	\end{figure}
+	
+	\item B
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_6b_1}
+  			\caption{phi=0}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_6b0}
+  			\caption{phi=2Hz}
+  			\label{fig:sub2}
+		\end{subfigure}
+		\label{fig:test}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_6b8}
+  			\caption{$phi$=$pi$/8}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_6b2}
+  			\caption{$phi$=$pi$/2}
+  			\label{fig:sub2}
+		\end{subfigure}
+		\caption{square waves of increasing frequency}
+		\label{fig:test}
+	\end{figure}
+	
+	\item C
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_6c10}
+  			\caption{$T_s$=1/10}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_6c1000}
+  			\caption{$T_s$=1/1000}
+  			\label{fig:sub2}
+		\end{subfigure}%
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_6c100000}
+  			\caption{$T_s$=1/100000}
+ 			\label{fig:sub3}
+		\end{subfigure}
+		\caption{longer running square waves.}
+		\label{fig:test}
+	\end{figure}
 \end{enumerate}
 \pagebreak
 
@@ -332,9 +410,9 @@ Mimic the code in speccos.m to find the spectrum of a cosine wave
 
 Mimic the code in filternoise.m to create a filter that
 \begin{enumerate}[label=\alph*.]
-\item Passes all frequencies above 500 Hz
-\item Passes all frequencies below 3000 Hz
-\item Rejects all frequencies between 1500 and 2500 Hz
+	\item Passes all frequencies above 500 Hz
+	\item Passes all frequencies below 3000 Hz
+	\item Rejects all frequencies between 1500 and 2500 Hz
 \end{enumerate}
 
 %%%%%%%%%%%%%%
@@ -343,9 +421,14 @@ Mimic the code in filternoise.m to create a filter that
 \solution
 
 \begin{enumerate}[label=\alph*.]
-\item A
-\item B
-\item C
+	\item A
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.9a}, language = Matlab]{p3_9a.m}
+	
+	\item B
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.9b}, language = Matlab]{p3_9b.m}
+	
+	\item C
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.9c}, language = Matlab]{p3_9c.m}
 \end{enumerate}
 \pagebreak
 
@@ -377,8 +460,8 @@ Let $x_1(t)$ be a cosine wave of frequency f = 800, $x_2(t)$ be a cosine wave of
 % SOLUTION 3.11
 %%%%%%%%%%%%%%%
 \solution
-
-soln here
+\lstinputlisting[caption = {MATLAB code for Exercise 3.11}, language = Matlab]{p3_11.m}
+TODO: change matlab script and get spectra and explain
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -388,9 +471,9 @@ soln here
 
 Mimic the code in modulate.m to find the spectrum of the output y(t) of a modulator block (with modulation frequency $f_c$ = 1000 Hz) when
 \begin{enumerate}[label=\alph*.]
-\item The input is \(x(t) = cos(2*\pi*f_1*t) + cos(2*\pi*f_2*t)\) for $f_1$ = 100 and $f_2$ = 150 Hz
-\item The input is a square wave with fundamental f = 150 Hz
-\item The input is a noise signal with all energy below 300 Hz
+	\item The input is \(x(t) = cos(2*\pi*f_1*t) + cos(2*\pi*f_2*t)\) for $f_1$ = 100 and $f_2$ = 150 Hz
+	\item The input is a square wave with fundamental f = 150 Hz
+	\item The input is a noise signal with all energy below 300 Hz
 \end{enumerate}
 
 %%%%%%%%%%%%%%%
@@ -399,118 +482,14 @@ Mimic the code in modulate.m to find the spectrum of the output y(t) of a modula
 \solution
 
 \begin{enumerate}[label=\alph*.]
-\item A
-\item B
-\item C
+	\item A
+	
+	\item B
+	
+	\item C
 \end{enumerate}
 \pagebreak
 
-
-
-\section*{Problem 1}
-
-What is Wi-Fi? What frequencies does it operate on? List out various 802.11 protocols and their respective frequencies and data rates. Finally, specify three factors that contribute to the weakening of Wi-Fi signals as they propagate in space. \\
-
-\solution
-
-\textbf{Wi-Fi} is technology for radio wireless local area networking of devices based on the IEEE 802.11 standards. \textit{Wi-Fi} is a trademark of the Wi-Fi Alliance, which restricts the use of the term \textit{Wi-Fi Certified} to products that successfully complete interoperability certification testing.\footnote{ "What is Wi-Fi (IEEE 802.11x)? A Webopedia Definition", \url{https://www.webopedia.com/TERM/W/Wi_Fi.html}} \\
-
-Wi-Fi operates on the following frequencies:
-\begin{itemize} % You can use \begin{itemize} to list items.
-\item 2.4 GHz
-\item 5 GHz
-\item 60 GHz
-\end{itemize}
-
-The table below lists out different Wi-Fi protocols, the frequency on which they operate and data rates associated with them.\footnote{"Downloading the newest Wi-Fi protocols: 802.11ax and 802.11ay explained", \url{https://arstechnica.com/gadgets/2018/11/802-eleventy-which-802-11ax-and-802-11ay-explained/}}
-
-\begin{center}
-\begin{tabular}{ |c|c|c| } % \begin{tabular} is used for tables. Each |c| stands for a single column. |c|c|c| creates a table with 3 columns.
- \hline % hline creates a lines between two rows.
- \textbf{Designation} & \textbf{Spectrum} & \textbf{single-MIMO PHY} \\
- \hline
- 802.11a & 5 GHz & 54 Mbps \\
- 802.11b & 2.4 GHz & 11 Mbps \\	
- 802.11g & 2.4 GHz & 54 Mbps \\	
- 802.11n & 2.4 GHz / 5 GHz & 144 Mbps / 300 Mbps \\
- 802.11ac & 5 GHz & 433 Mbps \\
- 802.11ad & 60 GHz & ~5 Gbps \\	
- 802.11ax (draft) & 2.4 GHz / 5 GHz & ~500 Mbps	\\
- 802.11ay (draft) & 60 GHz & ~ 40 Gbps \\
- \hline
-\end{tabular}
-\end{center}
-
-The three concepts that explain weakening of the Wi-Fi signal strength as it propagates in space are:
-\begin{enumerate} % \begin{enumerate} can be used for numbered lists
-\item Path loss
-\item Shadowing
-\item Multipath fading
-\end{enumerate}
-
-
-\section*{Problem 2}
-
-Find the Fourier Transform of the rectangular pulse: 
-
-% \begin{equation} is used for typing equations.
-\begin{equation} 
-\Pi(t) =
-	\begin{cases}
-      1, & -T/2 \leq t \leq T/2 \\
-      0, & \text{otherwise}
-    \end{cases}
-\end{equation} 
-
-\pagebreak % Use this when and where needed.
-
-\solution 
-
-The Fourier Transform of the rectangular pulse is calculated in the following manner:
-
-\begin{equation}
-\begin{split}
-W(f) = \int_{t = -\infty}^{\infty} \Pi (t)e^{-j2\pi ft} \:dt = \int_{t = -T/2}^{T/2} (1)e^{-j2\pi ft} \:dt = \frac{e^{-j2\pi ft}}{-j2\pi f}\bigg\vert_{t = -T/2}^{T/2} \\  
-= \frac{e^{-j\pi fT} - e^{j\pi fT}}{-j2\pi f} = T\frac{\sin(\pi fT)}{\pi fT} \equiv T\mbox{sinc} (fT)
-\end{split}
-\end{equation}
-
-% Note that \: creates a space.
-
-\section*{Problem 3}
-
-Write a Matlab code to upconvert an input sine signal (frequency $f_i$) to a higher frequency ($f_c$) of a carrier so that it can more easily propagate over long distances and plot the result. Be sure to also plot the input and the carrier signal. \\
-
-\solution 
-
-Here is the Matlab code: 
-
-\lstinputlisting[caption = {Sample code from Matlab}, language = Matlab]{modulate.m} % \lstinputlisting allows you to input Matlab code from a file.
-
-The resulting plots are shown in the figures below.
-
-% This is how you insert figures. \begin{figure}[H] is going to put the figure at the exact location of the Latex code, but you can also choose to put it on the top of the page by using \begin{figure}[t], bottom by using  \begin{figure}[b], etc. See for more: https://www.overleaf.com/learn/latex/Inserting_Images
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.5\textwidth]{carrier} % {...} is the name of your file, no extension needed. I named my image carrier in this instance and used .png extension, but .jpg also works.
-%\caption{Carrier signal}
-%\end{figure}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.5\textwidth]{input}
-%\caption{Input signal}
-%\end{figure}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.5\textwidth]{output}
-%\caption{Output signal}
-%\end{figure}
- 
-
-\vspace{5mm} %5mm vertical space, use as needed.
-
-
-
+%%%%%%%%%%%%%%%
+% END
 \end{document}

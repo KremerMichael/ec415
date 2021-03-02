@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  1 MAR 2021 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  2 MAR 2021 10:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -769,25 +769,106 @@ LaTeX Warning: Label `sub@fig:sub2' multiply defined.
 
 LaTeX Warning: Label `fig:test' multiply defined.
 
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub3' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
 )
 \openout1 = `hw2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -813,7 +894,7 @@ e
 ))
 \c@lstlisting=\count317
 \AtBeginShipoutBox=\box85
-Package hyperref Info: Link coloring OFF on input line 138.
+Package hyperref Info: Link coloring OFF on input line 116.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -827,22 +908,22 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count318
 )
-LaTeX Info: Redefining \ref on input line 138.
-LaTeX Info: Redefining \pageref on input line 138.
-LaTeX Info: Redefining \nameref on input line 138.
+LaTeX Info: Redefining \ref on input line 116.
+LaTeX Info: Redefining \pageref on input line 116.
+LaTeX Info: Redefining \nameref on input line 116.
  (./hw2.out) (./hw2.out)
 \@outlinefile=\write4
 \openout4 = `hw2.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 140
+LaTeX Font Info:    Trying to load font information for U+msa on input line 118
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 140
+LaTeX Font Info:    Trying to load font information for U+msb on input line 118
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -850,7 +931,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
@@ -861,52 +942,52 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 <p3_1a20.jpg, id=17, 1124.2pt x 843.15pt>
 File: p3_1a20.jpg Graphic file (type jpg)
 <use p3_1a20.jpg>
-Package pdftex.def Info: p3_1a20.jpg  used on input line 171.
+Package pdftex.def Info: p3_1a20.jpg  used on input line 149.
 (pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
 <p3_1a40.jpg, id=18, 1124.2pt x 843.15pt>
 File: p3_1a40.jpg Graphic file (type jpg)
 <use p3_1a40.jpg>
-Package pdftex.def Info: p3_1a40.jpg  used on input line 177.
+Package pdftex.def Info: p3_1a40.jpg  used on input line 155.
 (pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
 <p3_1a100.jpg, id=19, 1124.2pt x 843.15pt>
 File: p3_1a100.jpg Graphic file (type jpg)
 <use p3_1a100.jpg>
-Package pdftex.def Info: p3_1a100.jpg  used on input line 187.
+Package pdftex.def Info: p3_1a100.jpg  used on input line 165.
 (pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
 <p3_1a300.jpg, id=20, 1124.2pt x 843.15pt>
 File: p3_1a300.jpg Graphic file (type jpg)
 <use p3_1a300.jpg>
-Package pdftex.def Info: p3_1a300.jpg  used on input line 193.
+Package pdftex.def Info: p3_1a300.jpg  used on input line 171.
 (pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
  [2 <./p3_1a20.jpg> <./p3_1a40.jpg>]
 <p3_1b1.jpg, id=44, 1124.2pt x 843.15pt>
 File: p3_1b1.jpg Graphic file (type jpg)
 <use p3_1b1.jpg>
-Package pdftex.def Info: p3_1b1.jpg  used on input line 206.
+Package pdftex.def Info: p3_1b1.jpg  used on input line 184.
 (pdftex.def)             Requested size: 139.51704pt x 104.63443pt.
 <p3_1b10.jpg, id=45, 1124.2pt x 843.15pt>
 File: p3_1b10.jpg Graphic file (type jpg)
 <use p3_1b10.jpg>
-Package pdftex.def Info: p3_1b10.jpg  used on input line 212.
+Package pdftex.def Info: p3_1b10.jpg  used on input line 190.
 (pdftex.def)             Requested size: 139.51704pt x 104.63443pt.
 <p3_1b100.jpg, id=46, 1124.2pt x 843.15pt>
 File: p3_1b100.jpg Graphic file (type jpg)
 <use p3_1b100.jpg>
-Package pdftex.def Info: p3_1b100.jpg  used on input line 218.
+Package pdftex.def Info: p3_1b100.jpg  used on input line 196.
 (pdftex.def)             Requested size: 139.51704pt x 104.63443pt.
 <p3_1c100.jpg, id=47, 1124.2pt x 843.15pt>
 File: p3_1c100.jpg Graphic file (type jpg)
 <use p3_1c100.jpg>
-Package pdftex.def Info: p3_1c100.jpg  used on input line 232.
+Package pdftex.def Info: p3_1c100.jpg  used on input line 209.
 (pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
 <p3_1c10000.jpg, id=48, 1124.2pt x 843.15pt>
 File: p3_1c10000.jpg Graphic file (type jpg)
 <use p3_1c10000.jpg>
-Package pdftex.def Info: p3_1c10000.jpg  used on input line 238.
+Package pdftex.def Info: p3_1c10000.jpg  used on input line 215.
 (pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
  [3 <./p3_1a100.jpg> <./p3_1a300.jpg> <./p3_1b1.jpg> <./p3_1b10.jpg> <./p3_1b10
 0.jpg> <./p3_1c100.jpg> <./p3_1c10000.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
@@ -914,89 +995,130 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--261
 <p3_3a.jpg, id=60, 1124.2pt x 843.15pt>
 File: p3_3a.jpg Graphic file (type jpg)
 <use p3_3a.jpg>
-Package pdftex.def Info: p3_3a.jpg  used on input line 274.
+Package pdftex.def Info: p3_3a.jpg  used on input line 251.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
  (./p3_3b.m)
 <p3_3b.jpg, id=61, 1124.2pt x 843.15pt>
 File: p3_3b.jpg Graphic file (type jpg)
 <use p3_3b.jpg>
-Package pdftex.def Info: p3_3b.jpg  used on input line 282.
+Package pdftex.def Info: p3_3b.jpg  used on input line 260.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
  [4 <./p3_3a.jpg>] (./p3_3c.m)
 <p3_3c.jpg, id=92, 1124.2pt x 843.15pt>
 File: p3_3c.jpg Graphic file (type jpg)
 <use p3_3c.jpg>
-Package pdftex.def Info: p3_3c.jpg  used on input line 290.
+Package pdftex.def Info: p3_3c.jpg  used on input line 269.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
  (./p3_3d.m [5 <./p3_3b.jpg> <./p3_3c.jpg>])
 <p3_3d.jpg, id=110, 1124.2pt x 843.15pt>
 File: p3_3d.jpg Graphic file (type jpg)
 <use p3_3d.jpg>
-Package pdftex.def Info: p3_3d.jpg  used on input line 298.
+Package pdftex.def Info: p3_3d.jpg  used on input line 278.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
- [6 <./p3_3d.jpg>] [7] [8] [9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+ [6 <./p3_3d.jpg>] (./speccos.m)
+<p3_6a1.jpg, id=123, 1124.2pt x 843.15pt>
+File: p3_6a1.jpg Graphic file (type jpg)
+<use p3_6a1.jpg>
+Package pdftex.def Info: p3_6a1.jpg  used on input line 313.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_6a2.jpg, id=124, 1124.2pt x 843.15pt>
+File: p3_6a2.jpg Graphic file (type jpg)
+<use p3_6a2.jpg>
+Package pdftex.def Info: p3_6a2.jpg  used on input line 319.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_6a20.jpg, id=125, 1124.2pt x 843.15pt>
+File: p3_6a20.jpg Graphic file (type jpg)
+<use p3_6a20.jpg>
+Package pdftex.def Info: p3_6a20.jpg  used on input line 329.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_6a30.jpg, id=126, 1124.2pt x 843.15pt>
+File: p3_6a30.jpg Graphic file (type jpg)
+<use p3_6a30.jpg>
+Package pdftex.def Info: p3_6a30.jpg  used on input line 335.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+ [7 <./p3_6a1.jpg> <./p3_6a2.jpg>]
+<p3_6b_1.jpg, id=146, 1124.2pt x 843.15pt>
+File: p3_6b_1.jpg Graphic file (type jpg)
+<use p3_6b_1.jpg>
+Package pdftex.def Info: p3_6b_1.jpg  used on input line 348.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_6b0.jpg, id=147, 1124.2pt x 843.15pt>
+File: p3_6b0.jpg Graphic file (type jpg)
+<use p3_6b0.jpg>
+Package pdftex.def Info: p3_6b0.jpg  used on input line 354.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_6b8.jpg, id=148, 1124.2pt x 843.15pt>
+File: p3_6b8.jpg Graphic file (type jpg)
+<use p3_6b8.jpg>
+Package pdftex.def Info: p3_6b8.jpg  used on input line 364.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_6b2.jpg, id=149, 1124.2pt x 843.15pt>
+File: p3_6b2.jpg Graphic file (type jpg)
+<use p3_6b2.jpg>
+Package pdftex.def Info: p3_6b2.jpg  used on input line 370.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_6c10.jpg, id=150, 1124.2pt x 843.15pt>
+File: p3_6c10.jpg Graphic file (type jpg)
+<use p3_6c10.jpg>
+Package pdftex.def Info: p3_6c10.jpg  used on input line 383.
+(pdftex.def)             Requested size: 139.51704pt x 104.63443pt.
+<p3_6c1000.jpg, id=151, 1124.2pt x 843.15pt>
+File: p3_6c1000.jpg Graphic file (type jpg)
+<use p3_6c1000.jpg>
+Package pdftex.def Info: p3_6c1000.jpg  used on input line 389.
+(pdftex.def)             Requested size: 139.51704pt x 104.63443pt.
+<p3_6c100000.jpg, id=152, 1124.2pt x 843.15pt>
+File: p3_6c100000.jpg Graphic file (type jpg)
+<use p3_6c100000.jpg>
+Package pdftex.def Info: p3_6c100000.jpg  used on input line 395.
+(pdftex.def)             Requested size: 139.51704pt x 104.63443pt.
+ [8 <./p3_6a20.jpg> <./p3_6a30.jpg> <./p3_6b_1.jpg> <./p3_6b0.jpg> <./p3_6b8.jp
+g> <./p3_6b2.jpg>] [9 <./p3_6c10.jpg> <./p3_6c1000.jpg> <./p3_6c100000.jpg>] (.
+/p3_9a.m) (./p3_9b.m) (./p3_9c.m [10]) [11] [12] (./p3_11.m) [13] [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 495.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 495.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
-
- []
-
-(./modulate.m) [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 516.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 516.
- (./hw2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 516.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 516.
+(./hw2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 495.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 495.
 Package rerunfilecheck Info: File `hw2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 516.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 495.
  ) 
 Here is how much of TeX's memory you used:
- 21632 strings out of 480608
- 401088 string characters out of 5903631
- 848405 words of memory out of 5000000
- 36963 multiletter control sequences out of 15000+600000
- 543626 words of font info for 67 fonts, out of 8000000 for 9000
+ 21796 strings out of 480608
+ 403231 string characters out of 5903631
+ 861414 words of memory out of 5000000
+ 37057 multiletter control sequences out of 15000+600000
+ 543458 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,19n,66p,458b,1963s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,66p,413b,1963s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2020/texmf-dist
-/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/cm-super/sfti1000.pfb>
-Output written on hw2.pdf (13 pages, 1099224 bytes).
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on hw2.pdf (14 pages, 1799256 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 263 compressed objects within 3 object streams
- 131 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 380 PDF objects out of 1000 (max. 8388607)
+ 319 compressed objects within 4 object streams
+ 190 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
