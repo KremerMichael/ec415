@@ -137,7 +137,7 @@ Use specsquare.m to investigate the relationship between the time behavior of th
 
 To obtain all solutions to this exercise, a copy of the provided specsquare.m was used. For each part of the exercise, the relevant variable was changed before re-running the script and generating a plot.
 
-\lstinputlisting[caption = {MATLAB code for Exercise 3.1}, language = Matlab]{specsquare.m}
+\lstinputlisting[caption = {MATLAB code for Exercise 3.1}, language = Matlab]{p3_1.m}
 
 \begin{enumerate}[label=\alph*.]
 
@@ -172,7 +172,7 @@ To obtain all solutions to this exercise, a copy of the provided specsquare.m wa
   			\caption{f=300Hz}
   			\label{fig:sub2}
 		\end{subfigure}
-		\caption{square waves of increasing frequency}
+		\caption{square waves with different frequencies}
 		\label{fig:test}
 	\end{figure}
 
@@ -197,7 +197,7 @@ To obtain all solutions to this exercise, a copy of the provided specsquare.m wa
   			\caption{t=100sec}
  			\label{fig:sub3}
 		\end{subfigure}
-		\caption{longer running square waves.}
+		\caption{square waves of different lengths}
 		\label{fig:test}
 	\end{figure}
 
@@ -216,7 +216,7 @@ To obtain all solutions to this exercise, a copy of the provided specsquare.m wa
   			\caption{$T_s$=1/10000}
   			\label{fig:sub2}
 		\end{subfigure}
-		\caption{square waves of increasing sample rate}
+		\caption{different sampling times}
 		\label{fig:test}
 	\end{figure}
 \end{enumerate}
@@ -224,7 +224,7 @@ To obtain all solutions to this exercise, a copy of the provided specsquare.m wa
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.3
+% PROBLEM 3.3 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.3}
 
@@ -238,7 +238,7 @@ Mimic the code in specsquare.m to find the spectrum of:
 \end{enumerate}
 
 %%%%%%%%%%%%%%
-% SOLUTION 3.3
+% SOLUTION 3.3	
 %%%%%%%%%%%%%%
 \solution
 
@@ -248,8 +248,8 @@ Mimic the code in specsquare.m to find the spectrum of:
 	The resulting plot is shown in the figure below.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{p3_3a} 
-	\caption{p3.3a d}
+		\includegraphics[width=1\textwidth]{p3_3a} 
+		\caption{An exponential pulse \( s(t) = e^{-t} \) for \( 0 < t < 10\)}
 	\end{figure}
 	
 	\item Here is the MATLAB code:
@@ -257,8 +257,8 @@ Mimic the code in specsquare.m to find the spectrum of:
 	The resulting plot is shown in the figure below.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{p3_3b} 
-		\caption{p3.3b}
+		\includegraphics[width=1\textwidth]{p3_3b} 
+		\caption{A scaled exponential pulse \( s(t) = 5e^{-t} \) for \( 0 < t < 10\)}
 	\end{figure}
 	
 	\item Here is the MATLAB code:
@@ -266,8 +266,8 @@ Mimic the code in specsquare.m to find the spectrum of:
 	The resulting plot is shown in the figure below.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{p3_3c} 
-		\caption{p3.3c}
+		\includegraphics[width=1\textwidth]{p3_3c} 
+		\caption{A Gaussian pulse \( s(t) = e^{-t^2} \) for \( -2 < t < 2\)}
 	\end{figure}
 	
 	\item Here is the MATLAB code:
@@ -275,16 +275,43 @@ Mimic the code in specsquare.m to find the spectrum of:
 	The resulting plot is shown in the figure below.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{p3_3d} 
-		\caption{p3.3d}
+		\includegraphics[width=1\textwidth]{p3_3d} 
+		\caption{A Gaussian pulse \( s(t) = e^{-t^2} \) for \( -20 < t < 20\)}
 	\end{figure}
 	
-	\item Here is the MATLAB code: TODO
+	\item Here is the MATLAB code:
+	\lstinputlisting[caption = {MATLAB code for part e}, language = Matlab]{p3_3e.m} 
+	The resulting plots are shown in the figures below.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_3e20}
+  			\caption{f=20Hz and $\phi$=0}
+  			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+  			\includegraphics[width=.9\textwidth]{p3_3e100}
+  			\caption{f=100Hz and $\phi$=$\pi$/4}
+  			\label{fig:sub2}
+		\end{subfigure}%
+		\begin{subfigure}{.33\textwidth}
+  			\centering
+ 			\includegraphics[width=.9\textwidth]{p3_3e1000}
+  			\caption{f=1000Hz and $\phi$=$\pi$/2}
+ 			\label{fig:sub3}
+		\end{subfigure}
+		\caption{The sinusoids \( s(t) = sin(2\pi ft + \phi )\)}
+		\label{fig:test}
+	\end{figure}
+	
+	
 \end{enumerate}
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.6
+% PROBLEM 3.6 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.6}
 
@@ -302,10 +329,10 @@ Mimic the code in speccos.m to find the spectrum of a cosine wave
 
 To obtain all solutions to this exercise, a copy of the provided speccos.m was used. For each part of the exercise, the relevant variable was changed before re-running the script and generating a plot.
 
-\lstinputlisting[caption = {MATLAB code for Exercise 3.6}, language = Matlab]{speccos.m}
+\lstinputlisting[caption = {MATLAB code for Exercise 3.6}, language = Matlab]{p3_6.m}
 
 \begin{enumerate}[label=\alph*.]
-	\item Because the two non-zero spectrum values of a cosine wave are at +f and -f, as f increases ---TODO
+	\item Because the two non-zero spectrum values of a cosine wave are at +f and -f, as f changes, the two spectra peaks located at +f and -f  change with it.
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{.5\textwidth}
@@ -336,11 +363,11 @@ To obtain all solutions to this exercise, a copy of the provided speccos.m was u
   			\caption{f=30Hz}
   			\label{fig:sub2}
 		\end{subfigure}
-		\caption{cosine of increasing frequency}
+		\caption{different frequencies}
 		\label{fig:test}
 	\end{figure}
 	
-	\item B
+	\item As the phase changes, the plot in the time domain translates left and right accordingly, but the spectrum plot does not change.
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{.5\textwidth}
@@ -371,11 +398,11 @@ To obtain all solutions to this exercise, a copy of the provided speccos.m was u
   			\caption{$phi$=$pi$/2}
   			\label{fig:sub2}
 		\end{subfigure}
-		\caption{cosine wave of different phases}
+		\caption{different phases}
 		\label{fig:test}
 	\end{figure}
 	
-	\item C
+	\item As you can see in the figures below, the sampling rate is important for plotting the spectrum of cosine. In the case of $T_s$=1/10 which is equal to 1/f, we mistakenly get a single peak spectrum plot. In the third image, there are two distinct peaks with sufficient zooming, but MATLAB was not cooperating on this one.
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{.33\textwidth}
@@ -396,7 +423,7 @@ To obtain all solutions to this exercise, a copy of the provided speccos.m was u
   			\caption{$T_s$=1/100000}
  			\label{fig:sub3}
 		\end{subfigure}
-		\caption{cosine wave of increasing sampling rate}
+		\caption{different sampling}
 		\label{fig:test}
 	\end{figure}
 \end{enumerate}
@@ -404,7 +431,7 @@ To obtain all solutions to this exercise, a copy of the provided speccos.m was u
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.9
+% PROBLEM 3.9 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.9}
 
@@ -421,20 +448,38 @@ Mimic the code in filternoise.m to create a filter that
 \solution
 
 \begin{enumerate}[label=\alph*.]
-	\item A
+	\item Using this filter:
 	\lstinputlisting[caption = {MATLAB code for Exercise 3.9a}, language = Matlab]{p3_9a.m}
-	
-	\item B
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_9a} 
+		\caption{Passes all frequencies above 500 Hz}
+	\end{figure}
+		
+	\item Using this filter:
 	\lstinputlisting[caption = {MATLAB code for Exercise 3.9b}, language = Matlab]{p3_9b.m}
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_9b} 
+		\caption{Passes all frequencies below 3000 Hz}
+	\end{figure}
 	
-	\item C
+	\item Using this filter:
 	\lstinputlisting[caption = {MATLAB code for Exercise 3.9c}, language = Matlab]{p3_9c.m}
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_9c} 
+		\caption{Rejects all frequencies between 1500 and 2500 Hz}
+	\end{figure}
 \end{enumerate}
 \pagebreak
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.10
+% PROBLEM 3.10 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.10}
 
@@ -445,12 +490,39 @@ Change the sampling rate to $T_s$=1/20000. Redesign the three filters from Exerc
 %%%%%%%%%%%%%%%
 \solution
 
-soln here
+\begin{enumerate}[label=\alph*.]
+	\item Using this filter:
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.10a}, language = Matlab]{p3_10a.m}
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_10a} 
+		\caption{Passes all frequencies above 500 Hz}
+	\end{figure}
+		
+	\item Using this filter:
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.10b}, language = Matlab]{p3_10b.m}
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_10b} 
+		\caption{Passes all frequencies below 3000 Hz}
+	\end{figure}
+	
+	\item Using this filter:
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.10c}, language = Matlab]{p3_10c.m}
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_10c} 
+		\caption{Rejects all frequencies between 1500 and 2500 Hz}
+	\end{figure}
+\end{enumerate}
 \pagebreak
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.11
+% PROBLEM 3.11 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.11}
 
@@ -460,12 +532,28 @@ Let $x_1(t)$ be a cosine wave of frequency f = 800, $x_2(t)$ be a cosine wave of
 % SOLUTION 3.11
 %%%%%%%%%%%%%%%
 \solution
+
+Using this MATLAB code:
 \lstinputlisting[caption = {MATLAB code for Exercise 3.11}, language = Matlab]{p3_11.m}
-TODO: change matlab script and get spectra and explain
+and looking at this generated spectrum plot:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_11} 
+		\caption{}
+	\end{figure}
+	LOW PASS: The highest frequency spectra gets filtered out.\\
+	BAND PASS: All signals get filtered out.\\
+	HIGH PASS: All signals get filtered out.\\
+	This becomes more clear when comparing to the output of the unmodified filternoise.m below.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_11norm} 
+		\caption{original filternoise.m output with noisy input}
+	\end{figure}
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.26
+% PROBLEM 3.26 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.26}
 
@@ -482,11 +570,32 @@ Mimic the code in modulate.m to find the spectrum of the output y(t) of a modula
 \solution
 
 \begin{enumerate}[label=\alph*.]
-	\item A
+	\item Using this MATLAB script:
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.26a}, language = Matlab]{p3_26a.m}
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_26a} 
+		\caption{The input is \(x(t) = cos(2*\pi*f_1*t) + cos(2*\pi*f_2*t)\) for $f_1$ = 100 and $f_2$ = 150 Hz}
+	\end{figure}
+		
+	\item Using this MATLAB script:
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.26b}, language = Matlab]{p3_26b.m}
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_26b} 
+		\caption{The input is a square wave with fundamental f = 150 Hz}
+	\end{figure}
 	
-	\item B
-	
-	\item C
+	\item Using this MATLAB script:
+	\lstinputlisting[caption = {MATLAB code for Exercise 3.26c}, language = Matlab]{p3_26c.m}
+	I was able to create this output.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p3_26c} 
+		\caption{The input is a noise signal with all energy below 300 Hz}
+	\end{figure}
 \end{enumerate}
 \pagebreak
 
