@@ -1,0 +1,408 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the beggining of this LaTeX document that serves as 
+% Homework Template for EC415, Spring 2019. The template was 
+% created by Natasa Trkulja (ntrkulja@bu.edu) and 
+% Prof. David Starobinski (staro@bu.edu). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+% PACKAGES
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[numbered,framed]{matlab-prettifier}
+\usepackage{hyperref}
+\usepackage{subcaption}
+
+\usetikzlibrary{automata,positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\rhead{\hmwkClass\ (\hmwkClassInstructor): \hmwkTitle}
+%\rhead{\firstxmark}
+%\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+%\newcommand{\enterProblemHeader}[1]{
+%    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%}
+%
+%\newcommand{\exitProblemHeader}[1]{
+%    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%    \stepcounter{#1}
+%    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+%}
+
+%\setcounter{secnumdepth}{0}
+%\newcounter{partCounter}
+%\newcounter{homeworkProblemCounter}
+%\setcounter{homeworkProblemCounter}{1}
+%\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newcommand{\hmwkTitle}{Homework  3} % Be sure to update this as needed!
+\newcommand{\hmwkDueDate}{Friday 03/19/2021 6:00PM} % Be sure to update this as needed!
+\newcommand{\hmwkClass}{EC 415}
+\newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{Professor David Starobinski}
+\newcommand{\hmwkAuthorName}{Michael Kremer} % Be sure to update this!
+\newcommand{\hmwkKerberosName}{kremerme@bu.edu} % Be sure to update this!
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ by\ \hmwkDueDate\ }\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName} \\* \hmwkKerberosName}
+\date{}
+
+%\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Various Helper Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}   % Useful for algorithms
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)} % For derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}  % For partial derivatives
+\newcommand{\dx}{\mathrm{d}x}                               % Integral dx
+\newcommand{\solution}{\textbf{\large Solution}}            % Alias for the Solution section header
+\newcommand{\E}{\mathrm{E}}                                 % Probability commands: Expectation, 
+\newcommand{\Var}{\mathrm{Var}}                             %                       Variance,
+\newcommand{\Cov}{\mathrm{Cov}}                             %                       Covariance,
+\newcommand{\Bias}{\mathrm{Bias}}                           %                       Bias
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT REMOVE ANYTHING ABOVE THIS POINT. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN & TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.18 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 3.18}
+
+Mimic the code in speccos.m with sampling interval $T_s$=1/100 to find the spectrum of a square wave with fundamental f=10, 20, 30, 33, 43 Hz. Can you predict where the spikes will occur in each case? Which of the square waves show aliasing?\\
+
+%%%%%%%%%%%%%%%
+% SOLUTION 3.18
+%%%%%%%%%%%%%%%
+\solution
+
+TODO - Answer questions
+
+This was confirmed by using the following code and changing the value of f appropriately
+\lstinputlisting[caption = {MATLAB code for Exercise 3.18}, language = Matlab]{p3_18.m}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p3_18_10}
+		\caption{f=10Hz}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p3_18_20}
+		\caption{f=20Hz}
+		\label{fig:sub2}
+	\end{subfigure}
+	\label{fig:test}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p3_18_30}
+  		\caption{f=30Hz}
+  		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\textwidth]{p3_18_33}
+  		\caption{f=33Hz}
+  		\label{fig:sub2}
+	\end{subfigure}
+	\caption{ }
+	\label{fig:test}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{p3_18_43} 
+	\caption{f=43Hz}
+\end{figure}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.19
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 3.19}
+
+Mimic the code in speccos.m with $T_s$=1/1000 to find the spectrum of the output y(t) of a squaring block when the input is \( x(t) = cos(2\pi f_1t) + cos(2\pi f_2t)\) for $f_1$=100 and $f_2$=150Hz\\
+
+%%%%%%%%%%%%%%%
+% SOLUTION 3.19
+%%%%%%%%%%%%%%%
+\solution
+
+TODO i don't think this is right, what's a squarring block?
+
+Using this code
+\lstinputlisting[caption = {MATLAB code for Exercise 3.19}, language = Matlab]{p3_19.m}
+This output was generated
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p3_19} 
+	\caption{ TODO }
+\end{figure}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.20 --- DONE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 3.20}
+
+TRUE or FALSE: The bandwidth of $x^4$(t) cannot be greater than that of x(t). Explain.\\
+
+%%%%%%%%%%%%%%%
+% SOLUTION 3.20
+%%%%%%%%%%%%%%%
+\solution
+
+FALSE: for any given signal, \(Bandwidth(x^n(t)) = n * Bandwidth(x^(t)\). 
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.23
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 3.23}
+
+Suppose that the output of a nonlinear block is the rectification (absolute value) of the input \(y(t) = |x(t)|\). Find the spectrum of the output when the input is \(x(t) = cos(2\pi f1t) + cos(2\pi f2t)\) for $f_1$ = 100 and $f_2$ = 125 Hz\\
+
+%%%%%%%%%%%%%%%
+% SOLUTION 3.23
+%%%%%%%%%%%%%%%
+\solution
+
+Using this code
+\lstinputlisting[caption = {MATLAB code for Exercise 3.23}, language = Matlab]{p3_23.m}
+This output was generated
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p3_23} 
+	\caption{ TODO }
+\end{figure}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 3.25, 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 3.25}
+
+Quantization of an input is another kind of common nonlinearity. The Matlab function quantalph.m (available on the website) quantizes a signal to the nearest element of a desired set. Its help file reads\\
+$\%$ y=quantalph (x , alphabet )\\
+$\%$ quantize the input signal x to the alphabet\\
+$\%$ using nearest neighbor method\\
+$\%$ input x - vector to be quantized\\
+$\%$ alphabet − vector of discrete values\\
+$\%$ that y can assume\\
+$\%$ sorted in ascending order\\
+$\%$ output y − quantized vector\\
+Let x be a random vector x=randn(1,n) of length n. Quantize x to the nearest [−3, −1, 1, 3].
+\begin{enumerate}[label=\alph*.]
+	\item What percentage of the outputs are 1s? 3s?
+	\item Plot the magnitude spectrum of x and the magnitude spectrum of the output.
+	\item Now let x=3*randn(1,n) and answer the same questions.
+	\item Explain what the randn(1,n) function does.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%
+% SOLUTION 3.25
+%%%%%%%%%%%%%%%
+\solution
+
+This code was used to get the following answers
+\lstinputlisting[caption = {MATLAB code for Exercise 3.25}, language = Matlab]{p3_25.m}
+
+
+\begin{enumerate}[label=\alph*.]
+	\item 98\% of the outputs are 1 and the other 2\% of outputs are 3
+	\item TODO 
+	\item 71\% of the outputs are 1 and the other 29\% of outputs are 3
+	\item TODO 
+\end{enumerate}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 4.1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 4.1}
+
+Calculate the Fourier transform of $\delta$(t - $t_0$) from the definition. Now calculate it using the time-shift property (A.37). Are they the same?\\ 
+Hint: they had better be.\\
+
+%%%%%%%%%%%%%%
+% SOLUTION 4.1
+%%%%%%%%%%%%%%
+\solution
+
+Using the definition of a Fourier transform.\\
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 4.10 --- DONE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 4.10}
+
+Suppose that a system has an impulse response that is an exponential pulse. Mimic the code in convolex.m to find its output when the input is a white noise (recall specnoise.m on page 42).\\
+
+%%%%%%%%%%%%%%%
+% SOLUTION 4.10
+%%%%%%%%%%%%%%%
+\solution
+
+Using this code
+\lstinputlisting[caption = {MATLAB code for Exercise 4.10}, language = Matlab]{p4_10.m}
+This output was generated
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p4_10} 
+	\caption{output of exponential pulse response to noisy input}
+\end{figure}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 4.17 --- DONE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 4.17}
+
+Suppose a system has an impulse response that is a sinc function. Using freqresp.m, find the frequency response of the system. What kind of filter does this represent?\\
+Hint: center the sinc in time; for instance, use \(h=sinc(10*(t-time/2))\).\\
+
+%%%%%%%%%%%%%%%
+% SOLUTION 4.17
+%%%%%%%%%%%%%%%
+\solution
+
+Using this code
+\lstinputlisting[caption = {MATLAB code for Exercise 4.17}, language = Matlab]{p4_17.m}
+This output was generated
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p4_17} 
+	\caption{frequency response of system with sinc impulse response}
+\end{figure}
+This figure represents a low pass filter.
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 4.18
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 4.18}
+
+Suppose a system has an impulse response that is a sin function. Using freqresp.m, find the frequency response of the system. What kind of filter does this represent? Can you predict the relationship between the frequency of the sine wave and the location of the peaks in the spectrum?\\
+Hint: try \(h=sin(25*t)\).\\
+%%%%%%%%%%%%%%%
+% SOLUTION 4.18
+%%%%%%%%%%%%%%%
+\solution
+
+Using this code
+\lstinputlisting[caption = {MATLAB code for Exercise 4.18}, language = Matlab]{p4_18.m}
+This output was generated
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p4_18} 
+	\caption{frequency response of system with sinc impulse response}
+\end{figure}
+This figure represents a narrow band pass filter.
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plotting by hand
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Plotting by hand}
+
+Plot by hand the magnitude and argument of the spectrum of:
+\begin{enumerate}[label=\alph*.]
+	\item \( cos(40\pi t) + sin(20\pi t)\).
+	\item \( cos(20\pi t) + sin(20\pi t)\).
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%
+% SOLUTION PLOTTING
+%%%%%%%%%%%%%%%%%%%
+\solution
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p_hand_a} 
+	\caption{spectrum plot of  \( cos(40\pi t) + sin(20\pi t)\)}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p_hand_b} 
+	\caption{spectrum plot of  \( cos(20\pi t) + sin(20\pi t)\)}
+\end{figure}
+\pagebreak
+
+%%%%%%%%%%%%%%%
+% END
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% USEFUL THINGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% INSERT MATLAB CODE %%%%
+%\lstinputlisting[caption = {MATLAB code for Exercise 3.26b}, language = Matlab]{p3_26b.m}
+
+
+%%%% INSERT IMAGE %%%%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{p3_9a} 
+%	\caption{Passes all frequencies above 500 Hz}
+%\end{figure}
