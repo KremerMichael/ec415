@@ -118,7 +118,7 @@
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.18 
+% PROBLEM 3.18 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.18}
 
@@ -129,7 +129,7 @@ Mimic the code in speccos.m with sampling interval $T_s$=1/100 to find the spect
 %%%%%%%%%%%%%%%
 \solution
 
-TODO - Answer questions
+In each case the spikes occur at +f and -f. In this example the sampling frequency is 100Hz, therefore the Nyquist frequency is 50Hz. In the images below, as the signal frequency approaches the Nyquist frequency, more aliasing occurs.
 
 This was confirmed by using the following code and changing the value of f appropriately
 \lstinputlisting[caption = {MATLAB code for Exercise 3.18}, language = Matlab]{p3_18.m}
@@ -175,7 +175,7 @@ This was confirmed by using the following code and changing the value of f appro
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.19
+% PROBLEM 3.19 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.19}
 
@@ -186,15 +186,13 @@ Mimic the code in speccos.m with $T_s$=1/1000 to find the spectrum of the output
 %%%%%%%%%%%%%%%
 \solution
 
-TODO i don't think this is right, what's a squarring block?
-
 Using this code
 \lstinputlisting[caption = {MATLAB code for Exercise 3.19}, language = Matlab]{p3_19.m}
 This output was generated
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{p3_19} 
-	\caption{ TODO }
+	\caption{\( x(t) = cos(2\pi f_1t) + cos(2\pi f_2t)\) for $f_1$=100 and $f_2$=150Hz}
 \end{figure}
 \pagebreak
 
@@ -214,7 +212,7 @@ FALSE: for any given signal, \(Bandwidth(x^n(t)) = n * Bandwidth(x^(t)\).
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 3.23
+% PROBLEM 3.23 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 3.23}
 
@@ -231,7 +229,7 @@ This output was generated
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{p3_23} 
-	\caption{ TODO }
+	\caption{\(x(t) = cos(2\pi f1t) + cos(2\pi f2t)\) for $f_1$ = 100 and $f_2$ = 125 Hz}
 \end{figure}
 \pagebreak
 
@@ -268,14 +266,46 @@ This code was used to get the following answers
 
 \begin{enumerate}[label=\alph*.]
 	\item 98\% of the outputs are 1 and the other 2\% of outputs are 3
-	\item TODO 
+	\item Magnitude spectrums plotted below
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\textwidth]{p3_25bx}
+			\caption{magnitude spectrum of x}
+			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\textwidth]{p3_25by}
+			\caption{magnitude spectrum of output}
+			\label{fig:sub2}
+		\end{subfigure}
+		\label{fig:test}
+	\end{figure}
 	\item 71\% of the outputs are 1 and the other 29\% of outputs are 3
-	\item TODO 
+		\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\textwidth]{p3_25cx}
+			\caption{magnitude spectrum of x}
+			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\textwidth]{p3_25cy}
+			\caption{magnitude spectrum of output}
+			\label{fig:sub2}
+		\end{subfigure}
+		\label{fig:test}
+	\end{figure}
+	\item randn(1,n) generates a 1-by-n vector of random numbers.
 \end{enumerate}
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 4.1
+% PROBLEM 4.1 --- Done
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 4.1}
 
@@ -287,7 +317,14 @@ Hint: they had better be.\\
 %%%%%%%%%%%%%%
 \solution
 
-Using the definition of a Fourier transform.\\
+Using the definition of a Fourier transform:\\
+ \( F(x(t)) = \int_{-\infty}^{+\infty} x(t)e^{-j2\pi t} \,dt \)\\
+ \( F(\delta(t - t_0)) = \int_{-\infty}^{+\infty} \delta(t - t_0)e^{-j2\pi t} \,dt \)\\
+  \( F(\delta(t - t_0)) = e^{-j2\pi t_0}\)\\
+ Using the time-shift property:\\
+ \( F(w(t - t_0) = W(f)e^{-j2\pi ft_0}\)\\
+ \( W(\delta(t)) = 1\)\\
+ \( F(\delta(t - t_0) = e^{-j2\pi ft_0}\)
 
 \pagebreak
 
@@ -338,7 +375,7 @@ This figure represents a low pass filter.
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 4.18
+% PROBLEM 4.18 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 4.18}
 
@@ -357,11 +394,12 @@ This output was generated
 	\includegraphics[width=1\textwidth]{p4_18} 
 	\caption{frequency response of system with sinc impulse response}
 \end{figure}
-This figure represents a narrow band pass filter.
+This figure represents a narrow band pass filter. For this image the spectrum peaks are located at the frequency of the sine wave.\\
+\(25 = 2*\pi*3.979\) so \(f = 4Hz\) which corresponds to the spectrum peaks in the image above.
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Plotting by hand
+% Plotting by hand --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Plotting by hand}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  14 MAR 2021 13:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  15 MAR 2021 14:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -739,6 +739,36 @@ LaTeX Warning: Label `sub@fig:sub2' multiply defined.
 
 LaTeX Warning: Label `fig:test' multiply defined.
 
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
 )
 \openout1 = `hw3.aux'.
 
@@ -852,8 +882,8 @@ File: p3_18_43.jpg Graphic file (type jpg)
 <use p3_18_43.jpg>
 Package pdftex.def Info: p3_18_43.jpg  used on input line 171.
 (pdftex.def)             Requested size: 234.87749pt x 176.15327pt.
- [2 <./p3_18_10.jpg> <./p3_18_20.jpg> <./p3_18_30.jpg> <./p3_18_33.jpg>]
-[3 <./p3_18_43.jpg>]
+ [2 <./p3_18_10.jpg> <./p3_18_20.jpg>] [3 <./p3_18_30.jpg> <./p3_18_33.jpg> <./
+p3_18_43.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
@@ -862,15 +892,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 <p3_19.jpg, id=46, 1124.2pt x 843.15pt>
 File: p3_19.jpg Graphic file (type jpg)
 <use p3_19.jpg>
-Package pdftex.def Info: p3_19.jpg  used on input line 196.
+Package pdftex.def Info: p3_19.jpg  used on input line 194.
 (pdftex.def)             Requested size: 469.75499pt x 352.30656pt.
  [4 <./p3_19.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
@@ -878,76 +908,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--222
 <p3_23.jpg, id=68, 1124.2pt x 843.15pt>
 File: p3_23.jpg Graphic file (type jpg)
 <use p3_23.jpg>
-Package pdftex.def Info: p3_23.jpg  used on input line 233.
+Package pdftex.def Info: p3_23.jpg  used on input line 231.
 (pdftex.def)             Requested size: 469.75499pt x 352.30656pt.
  [6 <./p3_23.jpg>]
 
-./hw3.tex:248: Package inputenc Error: Unicode character − (U+2212)
+./hw3.tex:246: Package inputenc Error: Unicode character − (U+2212)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.248 $\%$ alphabet −
+l.246 $\%$ alphabet −
                         vector of discrete values\\
 ? s
 OK, entering \scrollmode...
 
-./hw3.tex:251: Package inputenc Error: Unicode character − (U+2212)
+./hw3.tex:249: Package inputenc Error: Unicode character − (U+2212)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.251 $\%$ output y −
+l.249 $\%$ output y −
                         quantized vector\\
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./hw3.tex:252: Package inputenc Error: Unicode character − (U+2212)
+./hw3.tex:250: Package inputenc Error: Unicode character − (U+2212)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.252 ... length n. Quantize x to the nearest [−
+l.250 ... length n. Quantize x to the nearest [−
                                                   3, −1, 1, 3].
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./hw3.tex:252: Package inputenc Error: Unicode character − (U+2212)
+./hw3.tex:250: Package inputenc Error: Unicode character − (U+2212)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.252 ...h n. Quantize x to the nearest [−3, −
+l.250 ...h n. Quantize x to the nearest [−3, −
                                                   1, 1, 3].
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 (./p3_25.m
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-6.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
+1.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
 
-[7]) [8]
-Underfull \hbox (badness 10000) in paragraph at lines 282--284
+[7])
+<p3_25bx.jpg, id=121, 1124.2pt x 843.15pt>
+File: p3_25bx.jpg Graphic file (type jpg)
+<use p3_25bx.jpg>
+Package pdftex.def Info: p3_25bx.jpg  used on input line 274.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_25by.jpg, id=122, 562.1pt x 421.575pt>
+File: p3_25by.jpg Graphic file (type jpg)
+<use p3_25by.jpg>
+Package pdftex.def Info: p3_25by.jpg  used on input line 280.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_25cx.jpg, id=123, 1124.2pt x 843.15pt>
+File: p3_25cx.jpg Graphic file (type jpg)
+<use p3_25cx.jpg>
+Package pdftex.def Info: p3_25cx.jpg  used on input line 291.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p3_25cy.jpg, id=124, 1124.2pt x 843.15pt>
+File: p3_25cy.jpg Graphic file (type jpg)
+<use p3_25cy.jpg>
+Package pdftex.def Info: p3_25cy.jpg  used on input line 297.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+ [8 <./p3_25bx.jpg> <./p3_25by.jpg> <./p3_25cx.jpg> <./p3_25cy.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
 
@@ -955,10 +1006,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--299
 <p4_10.jpg, id=150, 1124.2pt x 843.15pt>
 File: p4_10.jpg Graphic file (type jpg)
 <use p4_10.jpg>
-Package pdftex.def Info: p4_10.jpg  used on input line 310.
+Package pdftex.def Info: p4_10.jpg  used on input line 348.
 (pdftex.def)             Requested size: 469.75499pt x 352.30656pt.
  [10] [11 <./p4_10.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 320--322
+Underfull \hbox (badness 10000) in paragraph at lines 358--360
 
  []
 
@@ -966,64 +1017,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--322
 <p4_17.jpg, id=180, 1124.2pt x 843.15pt>
 File: p4_17.jpg Graphic file (type jpg)
 <use p4_17.jpg>
-Package pdftex.def Info: p4_17.jpg  used on input line 333.
+Package pdftex.def Info: p4_17.jpg  used on input line 371.
 (pdftex.def)             Requested size: 469.75499pt x 352.30656pt.
  [12 <./p4_17.jpg>] (./p4_18.m)
 <p4_18.jpg, id=192, 1124.2pt x 843.15pt>
 File: p4_18.jpg Graphic file (type jpg)
 <use p4_18.jpg>
-Package pdftex.def Info: p4_18.jpg  used on input line 356.
+Package pdftex.def Info: p4_18.jpg  used on input line 394.
 (pdftex.def)             Requested size: 469.75499pt x 352.30656pt.
  [13 <./p4_18.jpg>]
 <p_hand_a.jpg, id=205, 1011.78pt x 945.5325pt>
 File: p_hand_a.jpg Graphic file (type jpg)
 <use p_hand_a.jpg>
-Package pdftex.def Info: p_hand_a.jpg  used on input line 380.
+Package pdftex.def Info: p_hand_a.jpg  used on input line 419.
 (pdftex.def)             Requested size: 469.75499pt x 439.0044pt.
 <p_hand_b.jpg, id=206, 1011.78pt x 945.5325pt>
 File: p_hand_b.jpg Graphic file (type jpg)
 <use p_hand_b.jpg>
-Package pdftex.def Info: p_hand_b.jpg  used on input line 385.
+Package pdftex.def Info: p_hand_b.jpg  used on input line 424.
 (pdftex.def)             Requested size: 469.75499pt x 439.0044pt.
  [14 <./p_hand_a.jpg>] [15 <./p_hand_b.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 392.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 431.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 431.
  (./hw3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 392.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 431.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 431.
 Package rerunfilecheck Info: File `hw3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 392.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 431.
  ) 
 Here is how much of TeX's memory you used:
- 21643 strings out of 480608
- 401431 string characters out of 5903631
- 842848 words of memory out of 5000000
- 36963 multiletter control sequences out of 15000+600000
- 541835 words of font info for 60 fonts, out of 8000000 for 9000
+ 21669 strings out of 480608
+ 401776 string characters out of 5903631
+ 843149 words of memory out of 5000000
+ 36996 multiletter control sequences out of 15000+600000
+ 542212 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,12n,66p,413b,1832s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on hw3.pdf (15 pages, 1349720 bytes).
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on hw3.pdf (15 pages, 1752892 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 247 compressed objects within 3 object streams
- 141 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 250 compressed objects within 3 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
