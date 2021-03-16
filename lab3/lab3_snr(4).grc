@@ -32,6 +32,18 @@ options:
     state: enabled
 
 blocks:
+- name: carrier_freq
+  id: variable
+  parameters:
+    comment: ''
+    value: '20000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1132, 149]
+    rotation: 0
+    state: true
 - name: noise_voltage
   id: variable_qtgui_range
   parameters:
@@ -84,7 +96,7 @@ blocks:
     alias: ''
     amp: '1'
     comment: ''
-    freq: '0'
+    freq: carrier_freq
     maxoutbuf: '0'
     minoutbuf: '0'
     offset: '0'
@@ -285,7 +297,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    center_freq: '0'
+    center_freq: carrier_freq
     comment: ''
     decim: '1'
     maxoutbuf: '0'
@@ -297,7 +309,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [704, 692.0]
+    coordinate: [706, 692]
     rotation: 180
     state: enabled
 - name: note_0
