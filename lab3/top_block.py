@@ -76,15 +76,19 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         self.samples_per_bit = samples_per_bit = 200
         self.samp_rate = samp_rate = 200000
-        self.noise_voltage = noise_voltage = 0
+        self.noise_voltage = noise_voltage = 0.6
+        self.cutoff_freq = cutoff_freq = 50000
         self.carrier_freq = carrier_freq = 20000
 
         ##################################################
         # Blocks
         ##################################################
-        self._noise_voltage_range = Range(0, 2, 0.1, 0, 200)
+        self._noise_voltage_range = Range(0, 2, 0.1, 0.6, 200)
         self._noise_voltage_win = RangeWidget(self._noise_voltage_range, self.set_noise_voltage, 'noise_voltage', "counter_slider", float)
         self.top_grid_layout.addWidget(self._noise_voltage_win)
+        self._cutoff_freq_range = Range(1, 50000, 250, 50000, 200)
+        self._cutoff_freq_win = RangeWidget(self._cutoff_freq_range, self.set_cutoff_freq, 'cutoff_freq', "counter_slider", float)
+        self.top_grid_layout.addWidget(self._cutoff_freq_win)
         self.qtgui_time_sink_x_1_0_0 = qtgui.time_sink_f(
             1024, #size
             samp_rate, #samp_rate
@@ -279,6 +283,46 @@ class top_block(gr.top_block, Qt.QWidget):
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win)
+        self.qtgui_freq_sink_x_1 = qtgui.freq_sink_c(
+            1024, #size
+            firdes.WIN_BLACKMAN_hARRIS, #wintype
+            0, #fc
+            samp_rate, #bw
+            "Null-to-Null BW", #name
+            1
+        )
+        self.qtgui_freq_sink_x_1.set_update_time(0.10)
+        self.qtgui_freq_sink_x_1.set_y_axis(-140, 10)
+        self.qtgui_freq_sink_x_1.set_y_label('Relative Gain', 'dB')
+        self.qtgui_freq_sink_x_1.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
+        self.qtgui_freq_sink_x_1.enable_autoscale(False)
+        self.qtgui_freq_sink_x_1.enable_grid(False)
+        self.qtgui_freq_sink_x_1.set_fft_average(1.0)
+        self.qtgui_freq_sink_x_1.enable_axis_labels(True)
+        self.qtgui_freq_sink_x_1.enable_control_panel(False)
+
+
+
+        labels = ['', '', '', '', '',
+            '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+            "magenta", "yellow", "dark red", "dark green", "dark blue"]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+            1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in range(1):
+            if len(labels[i]) == 0:
+                self.qtgui_freq_sink_x_1.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_freq_sink_x_1.set_line_label(i, labels[i])
+            self.qtgui_freq_sink_x_1.set_line_width(i, widths[i])
+            self.qtgui_freq_sink_x_1.set_line_color(i, colors[i])
+            self.qtgui_freq_sink_x_1.set_line_alpha(i, alphas[i])
+
+        self._qtgui_freq_sink_x_1_win = sip.wrapinstance(self.qtgui_freq_sink_x_1.pyqwidget(), Qt.QWidget)
+        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_1_win)
         self.qtgui_freq_sink_x_0_0 = qtgui.freq_sink_c(
             1024, #size
             firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -359,7 +403,7 @@ class top_block(gr.top_block, Qt.QWidget):
 
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win)
-        self.freq_xlating_fir_filter_xxx_0 = filter.freq_xlating_fir_filter_ccf(1, [1], carrier_freq, samp_rate)
+        self.freq_xlating_fir_filter_xxx_0 = filter.freq_xlating_fir_filter_ccf(1, firdes.low_pass(1, samp_rate, cutoff_freq, 250), carrier_freq, samp_rate)
         self.channels_channel_model_0 = channels.channel_model(
             noise_voltage=noise_voltage,
             frequency_offset=0.0,
@@ -395,6 +439,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_threshold_ff_0, 0), (self.blocks_keep_one_in_n_0, 0))
         self.connect((self.blocks_threshold_ff_0, 0), (self.qtgui_time_sink_x_0_0, 0))
         self.connect((self.blocks_throttle_0, 0), (self.channels_channel_model_0, 0))
+        self.connect((self.blocks_throttle_0, 0), (self.qtgui_freq_sink_x_1, 0))
         self.connect((self.blocks_throttle_0, 0), (self.qtgui_time_sink_x_1, 0))
         self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_repeat_0, 0))
         self.connect((self.channels_channel_model_0, 0), (self.freq_xlating_fir_filter_xxx_0, 0))
@@ -423,8 +468,10 @@ class top_block(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate
         self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
+        self.freq_xlating_fir_filter_xxx_0.set_taps(firdes.low_pass(1, self.samp_rate, self.cutoff_freq, 250))
         self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
         self.qtgui_freq_sink_x_0_0.set_frequency_range(0, self.samp_rate)
+        self.qtgui_freq_sink_x_1.set_frequency_range(0, self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_1.set_samp_rate(self.samp_rate)
@@ -436,6 +483,13 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_noise_voltage(self, noise_voltage):
         self.noise_voltage = noise_voltage
         self.channels_channel_model_0.set_noise_voltage(self.noise_voltage)
+
+    def get_cutoff_freq(self):
+        return self.cutoff_freq
+
+    def set_cutoff_freq(self, cutoff_freq):
+        self.cutoff_freq = cutoff_freq
+        self.freq_xlating_fir_filter_xxx_0.set_taps(firdes.low_pass(1, self.samp_rate, self.cutoff_freq, 250))
 
     def get_carrier_freq(self):
         return self.carrier_freq
