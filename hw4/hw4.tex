@@ -1,0 +1,294 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the beggining of this LaTeX document that serves as 
+% Homework Template for EC415, Spring 2019. The template was 
+% created by Natasa Trkulja (ntrkulja@bu.edu) and 
+% Prof. David Starobinski (staro@bu.edu). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+% PACKAGES
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[numbered,framed]{matlab-prettifier}
+\usepackage{hyperref}
+\usepackage{subcaption}
+
+\usetikzlibrary{automata,positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\rhead{\hmwkClass\ (\hmwkClassInstructor): \hmwkTitle}
+%\rhead{\firstxmark}
+%\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+%\newcommand{\enterProblemHeader}[1]{
+%    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%}
+%
+%\newcommand{\exitProblemHeader}[1]{
+%    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%    \stepcounter{#1}
+%    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+%}
+
+%\setcounter{secnumdepth}{0}
+%\newcounter{partCounter}
+%\newcounter{homeworkProblemCounter}
+%\setcounter{homeworkProblemCounter}{1}
+%\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newcommand{\hmwkTitle}{Homework  4} % Be sure to update this as needed!
+\newcommand{\hmwkDueDate}{Friday 04/09/2021 6:00PM} % Be sure to update this as needed!
+\newcommand{\hmwkClass}{EC 415}
+\newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{Professor David Starobinski}
+\newcommand{\hmwkAuthorName}{Michael Kremer} % Be sure to update this!
+\newcommand{\hmwkKerberosName}{kremerme@bu.edu} % Be sure to update this!
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ by\ \hmwkDueDate\ }\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName} \\* \hmwkKerberosName}
+\date{}
+
+%\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Various Helper Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}   % Useful for algorithms
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)} % For derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}  % For partial derivatives
+\newcommand{\dx}{\mathrm{d}x}                               % Integral dx
+\newcommand{\solution}{\textbf{\large Solution}}            % Alias for the Solution section header
+\newcommand{\E}{\mathrm{E}}                                 % Probability commands: Expectation, 
+\newcommand{\Var}{\mathrm{Var}}                             %                       Variance,
+\newcommand{\Cov}{\mathrm{Cov}}                             %                       Covariance,
+\newcommand{\Bias}{\mathrm{Bias}}                           %                       Bias
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT REMOVE ANYTHING ABOVE THIS POINT. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN & TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 4.21 (page 78)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 4.21}
+
+Suppose that the noise in improvesnr.m is replaced with narrowband noise (as discussed in Section 4.1.3). Investigate the improvements in SNR
+\begin{enumerate}[label=\alph*.]
+    \item when the narrowband interference occurs outside the 3000 to 4000 Hz passband,
+    \item when the narrowband interference occurs inside the 3000 to 4000 Hz passband.
+\end{enumerate}
+For part (a) use \(n=0.1*(\cos(2*pi*f1*t) + \cos(2*\pi*f_2*t))\) to model narrowband noise around the frequencies $f_1$ and $f_2$. Choose $f_1$ = 2000 Hz and $f_2$ = 5000Hz.
+\\For part (b) use \(n=0.1*\cos(2*\pi*f3*t)\) to model narrowband noise around the frequency $f_3$. Choose $f_3$ = 3500 Hz.
+
+%%%%%%%%%%%%%%%
+% SOLUTION 4.21
+%%%%%%%%%%%%%%%
+\solution
+
+\begin{enumerate}[label=\alph*.]
+    \item TODO
+    \item TODO
+\end{enumerate}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 5.9 (page 88)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 5.9}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{fig_5_8} 
+	\caption{Figure 5.8}
+\end{figure}
+Consider the system shown in Figure 5.8. Show that the output of the system is \(2A_0w(t)\cos(2\pi f_ct)\), as indicated.
+
+%%%%%%%%%%%%%%
+% SOLUTION 5.9
+%%%%%%%%%%%%%%
+\solution
+
+TODO
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 5.12 (page 89)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 5.12}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{fig_5_9} 
+	\caption{Figure 5.9}
+\end{figure}
+Consider the transmission system of Figure 5.9. The message signal $w(t)$ has the magnitude spectrum shown in part (a). The transmitter in part (b) produces the transmitted signal x(t), which passes through the chan- nel in part (c). The channel scales the signal and adds narrowband interferers to create the received signal r(t). The transmitter and channel parameters are φ1 = 0.3 radians, f1 = 24.1 kHz, f2 = 23.9 kHz, f3 = 27.5 kHz, f4 = 29.3 kHz, and f5 = 22.6 kHz. The receiver processing r(t) is shown in Figure 5.9(d). All bandpass and lowpass filters are considered ideal, with a gain of unity in the passband and zero in the stopband.
+\begin{enumerate}[label=\alph*.]
+    \item Sketch \(|R(f)|\) for −30 kHz $\leq$ f $\leq$ 30 kHz. Clearly indicate the amplitudes and frequencies of key points in the sketch.
+    \item Assume that $\phi_2$ is chosen to maximize the magnitude of $y(t)$ and reflects the value of $\phi_1$ and the delays imposed by the two ideal bandpass filters that form the received signal $r(t)$. Select the receiver parameters $f_6$, $f_7$, $f_8$, and $f_9$, so the receiver output $y(t)$ is a scaled version of $w(t)$.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%
+% SOLUTION 5.12
+%%%%%%%%%%%%%%%
+\solution
+
+TODO
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 5.16 (page 92)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 5.16}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{fig_5_11} 
+	\caption{Figure 5.11}
+\end{figure}
+Consider the scheme shown in Figure 5.11. The absolute band- width of the baseband signal $x_1$ is 6 MHz and that of the baseband signal $x_2(t)$ is 4MHz, $f_1$ = 164MHz, $f_2$ = 154MHz, $f_3$ = 148MHz, $f_4$ = 160MHz, $f_5$ = 80MHz, \(\phi=\pi/2\),and $f_6$ = 82MHz.
+\begin{enumerate}[label=\alph*.]
+    \item What is the absolute bandwidth of $x_3(t)$? 
+    \item What is the absolute bandwidth of $x_5(t)$? 
+    \item What is the absolute bandwidth of $x_6(t)$?
+    \item What is the maximum frequency in $x_3(t)$? 
+    \item What is the maximum frequency in $x_5(t)$?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%
+% SOLUTION 5.16
+%%%%%%%%%%%%%%%
+\solution
+
+\begin{enumerate}[label=\alph*.]
+    \item TODO 
+    \item TODO 
+    \item TODO
+    \item TODO
+    \item TODO
+\end{enumerate}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 5 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 5}
+
+Consider the last line of AMlarge.m (see Listing 5.1):\\
+\(envv=(\pi/2)*filter(b,1,abs(v))\);\\
+Why is the output of the filter multiplied by the constant $\pi/2$? Justify your answer.
+
+%%%%%%%%%%%%%
+% SOLUTION Q5
+%%%%%%%%%%%%%
+\solution
+
+TODO
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 6}
+
+
+The attached qam$\_$hw.mat file is a QAM passband signal 𝑣 that is the sum of two modulated messages $w_1$ and $w_2$.
+These messages were respectively modulated using cosine and sine functions, with carrier signal f = 1000 Hz. The sampling period is T = 1/10000s and the total
+duration of the signal is 0.3s. Note that these parameters are all the same as in the file AM.m (listing 5.2 in the textbook).
+Plot the following:
+\begin{enumerate}
+    \item The modulated signal v.
+    \item The demodulated signals (before the LPF) $x_1$ and $x_2$.
+    \item The recovered signals (after the LPF) $m_1$ and $m_2$.
+\end{enumerate}
+
+Hints:
+\begin{enumerate}
+    \item To load the QAM signal 𝑣, use the command: load$('qam\_hw.mat','v')$;
+    \item Use the same LPF parameters as in AM.m.
+    \item The x-axis should be [0, 0.3] for all the plots.
+    \item For the signal v, the y-axis should be [−11,11].
+    \item For the signal $x_1$ and $m_1$, the y-axis should be [−5,10].
+    \item For the signals $x_2$ and $m_2$, the y-axis should be [−10,1].
+\end{enumerate}
+
+%%%%%%%%%%%%%
+% SOLUTION Q6
+%%%%%%%%%%%%%
+\solution
+
+\begin{enumerate}
+    \item TODO
+    \item TODO
+    \item TODO
+\end{enumerate}
+\pagebreak
+
+%%%%%%%%%%%%%%%
+% END
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% USEFUL THINGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% INSERT MATLAB CODE %%%%
+%\lstinputlisting[caption = {MATLAB code for Exercise 3.26b}, language = Matlab]{p3_26b.m}
+
+
+%%%% INSERT IMAGE %%%%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{p3_9a} 
+%	\caption{Passes all frequencies above 500 Hz}
+%\end{figure}
