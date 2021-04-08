@@ -8,6 +8,7 @@ fbe=[0 0.05 0.1 1];                 % LPF design
 damps=[1 1 0 0]; fl=100; 
 b=firpm(fl,fbe,damps);              % impulse response of LPF
 envv=(pi/2)*filter(b,1,abs(v));     % find envelope
+%envv=filter(b,1,abs(v));     % find envelope
 
 % generate the figure
 figure(1)

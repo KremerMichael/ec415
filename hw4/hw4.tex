@@ -136,13 +136,15 @@ For part (a) use \(n=0.1*(\cos(2*pi*f1*t) + \cos(2*\pi*f_2*t))\) to model narrow
 \solution
 
 \begin{enumerate}[label=\alph*.]
-    \item TODO
-    \item TODO
+    \item using this code:
+    	\lstinputlisting[caption = {MATLAB code for Exercise 4.21a}, language = Matlab]{p4_21a.m}
+    \item using this code:
+    	\lstinputlisting[caption = {MATLAB code for Exercise 4.21b}, language = Matlab]{p4_21b.m}
 \end{enumerate}
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 5.9 (page 88)
+% PROBLEM 5.9 (page 88) --- DONE-ish
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 5.9}
 
@@ -158,7 +160,12 @@ Consider the system shown in Figure 5.8. Show that the output of the system is \
 %%%%%%%%%%%%%%
 \solution
 
-TODO
+\([ w(t) + A_0\cos(2\pi f_ct) ]^2 = {w(t)}^2 + 2A_0w(t)\cos(2\pi f_ct) + {\cos(2\pi f_ct)}^2\)\\
+\\
+\({\cos(2\pi f_ct)}^2\) is centered at 0 and 2$f_c$and filtered out\\
+\({w(t)}^2\) is centered at 0 and filtered out\\
+\\
+output is \(2A_0w(t)\cos(2\pi f_ct)\)
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,7 +178,7 @@ TODO
 	\includegraphics[width=1\textwidth]{fig_5_9} 
 	\caption{Figure 5.9}
 \end{figure}
-Consider the transmission system of Figure 5.9. The message signal $w(t)$ has the magnitude spectrum shown in part (a). The transmitter in part (b) produces the transmitted signal x(t), which passes through the chan- nel in part (c). The channel scales the signal and adds narrowband interferers to create the received signal r(t). The transmitter and channel parameters are φ1 = 0.3 radians, f1 = 24.1 kHz, f2 = 23.9 kHz, f3 = 27.5 kHz, f4 = 29.3 kHz, and f5 = 22.6 kHz. The receiver processing r(t) is shown in Figure 5.9(d). All bandpass and lowpass filters are considered ideal, with a gain of unity in the passband and zero in the stopband.
+Consider the transmission system of Figure 5.9. The message signal $w(t)$ has the magnitude spectrum shown in part (a). The transmitter in part (b) produces the transmitted signal x(t), which passes through the channel in part (c). The channel scales the signal and adds narrowband interferers to create the received signal r(t). The transmitter and channel parameters are φ1 = 0.3 radians, f1 = 24.1 kHz, f2 = 23.9 kHz, f3 = 27.5 kHz, f4 = 29.3 kHz, and f5 = 22.6 kHz. The receiver processing r(t) is shown in Figure 5.9(d). All bandpass and lowpass filters are considered ideal, with a gain of unity in the passband and zero in the stopband.
 \begin{enumerate}[label=\alph*.]
     \item Sketch \(|R(f)|\) for −30 kHz $\leq$ f $\leq$ 30 kHz. Clearly indicate the amplitudes and frequencies of key points in the sketch.
     \item Assume that $\phi_2$ is chosen to maximize the magnitude of $y(t)$ and reflects the value of $\phi_1$ and the delays imposed by the two ideal bandpass filters that form the received signal $r(t)$. Select the receiver parameters $f_6$, $f_7$, $f_8$, and $f_9$, so the receiver output $y(t)$ is a scaled version of $w(t)$.
@@ -196,7 +203,7 @@ TODO
 	\includegraphics[width=1\textwidth]{fig_5_11} 
 	\caption{Figure 5.11}
 \end{figure}
-Consider the scheme shown in Figure 5.11. The absolute band- width of the baseband signal $x_1$ is 6 MHz and that of the baseband signal $x_2(t)$ is 4MHz, $f_1$ = 164MHz, $f_2$ = 154MHz, $f_3$ = 148MHz, $f_4$ = 160MHz, $f_5$ = 80MHz, \(\phi=\pi/2\),and $f_6$ = 82MHz.
+Consider the scheme shown in Figure 5.11. The absolute bandwidth of the baseband signal $x_1$ is 6 MHz and that of the baseband signal $x_2(t)$ is 4MHz, $f_1$ = 164MHz, $f_2$ = 154MHz, $f_3$ = 148MHz, $f_4$ = 160MHz, $f_5$ = 80MHz, \(\phi=\pi/2\),and $f_6$ = 82MHz.
 \begin{enumerate}[label=\alph*.]
     \item What is the absolute bandwidth of $x_3(t)$? 
     \item What is the absolute bandwidth of $x_5(t)$? 
@@ -211,11 +218,17 @@ Consider the scheme shown in Figure 5.11. The absolute band- width of the baseba
 \solution
 
 \begin{enumerate}[label=\alph*.]
-    \item TODO 
-    \item TODO 
-    \item TODO
-    \item TODO
-    \item TODO
+    \item \(x_3(t) = x_1(t)\cos(2\pi f_1t) + x_2(t)\cos(2\pi f_2 t)\)\\
+    		min frequency = 150MHz and max frequency = 170MHz\\
+		absolute bandwidth = 20MHz
+    \item \(x_5(t) = x_4(t)\cos(2\pi f_5t + \phi)\)\\
+    		WRONG\\
+    		\(x_4(t) = x_3(t)\) from $f_3$ to $f_4$ and 0 otherwise\\
+		min frequency = 150MHz and max frequency = 160MHz\\
+		absolute bandwidth = 10MHz
+    \item \(x_6(t) = x_5(t)\) when < $f_6$ and 0 otherwise
+    \item The max frequency of $x_3(t)$ is 170MHz
+    \item The max frequency of $x_5(t)$ is ????
 \end{enumerate}
 \pagebreak
 
@@ -233,18 +246,52 @@ Why is the output of the filter multiplied by the constant $\pi/2$? Justify your
 %%%%%%%%%%%%%
 \solution
 
-TODO
+The output of the filter is multiplied by the constant $\pi/2$ FINISH EXPLANATION\\
+\(envv=(\pi/2)*filter(b,1,abs(v))\)
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{q5a}
+		\caption{amplitude of signals}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{q5a2}
+		\caption{overlay}
+		\label{fig:sub2}
+	\end{subfigure}
+	\label{fig:test}
+\end{figure}
+This becomes more clear when comparing the results to a non-multiplied filter output
+\(envv=filter(b,1,abs(v))\)
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{q5a}
+		\caption{amplitude of signals}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{q5a2}
+		\caption{overlay}
+		\label{fig:sub2}
+	\end{subfigure}
+	\label{fig:test}
+\end{figure}
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QUESTION 6
+% QUESTION 6 --- DONE-ish
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Question 6}
 
 
-The attached qam$\_$hw.mat file is a QAM passband signal 𝑣 that is the sum of two modulated messages $w_1$ and $w_2$.
-These messages were respectively modulated using cosine and sine functions, with carrier signal f = 1000 Hz. The sampling period is T = 1/10000s and the total
-duration of the signal is 0.3s. Note that these parameters are all the same as in the file AM.m (listing 5.2 in the textbook).
+The attached qam$\_$hw.mat file is a QAM passband signal v that is the sum of two modulated messages $w_1$ and $w_2$.
+These messages were respectively modulated using cosine and sine functions, with carrier signal f = 1000 Hz. The sampling period is T = 1/10000s and the total duration of the signal is 0.3s. Note that these parameters are all the same as in the file AM.m (listing 5.2 in the textbook).\\
 Plot the following:
 \begin{enumerate}
     \item The modulated signal v.
@@ -254,7 +301,7 @@ Plot the following:
 
 Hints:
 \begin{enumerate}
-    \item To load the QAM signal 𝑣, use the command: load$('qam\_hw.mat','v')$;
+    \item To load the QAM signal v, use the command: load$('qam\_hw.mat','v')$;
     \item Use the same LPF parameters as in AM.m.
     \item The x-axis should be [0, 0.3] for all the plots.
     \item For the signal v, the y-axis should be [−11,11].
@@ -268,9 +315,27 @@ Hints:
 \solution
 
 \begin{enumerate}
-    \item TODO
-    \item TODO
-    \item TODO
+Using this code:
+\lstinputlisting[caption = {MATLAB code for Exercise 4.21a}, language = Matlab]{p4_21a.m}
+I was able to obtain these graphs
+    \item
+    \begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{q6a} 
+	\caption{the modulated signal v}
+   \end{figure}
+    \item
+    \begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{q6b} 
+	\caption{the demodulated signals (before the LPF) $x_1$ and $x_2$}
+   \end{figure}    
+    \item
+    \begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{q6c} 
+	\caption{the recovered signals (after the LPF) $m_1$ and $m_2$}
+   \end{figure}        
 \end{enumerate}
 \pagebreak
 

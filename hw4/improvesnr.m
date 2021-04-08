@@ -4,6 +4,7 @@ freqs=[0 0.29 0.3 0.4 0.41 1];    % filter design, bandlimited
 amps=[0 0 1 1 0 0];               % ...between 3K and 4K
 b=firpm(100,freqs,amps);          % BP filter
 n=0.25*randn(1,time/Ts);          % generate white noise signal
+n
 x=filter(b,1,2*randn(1,time/Ts)); % do the filtering
 y=filter(b,1,x+n);                % (a) filter the signal+noise
 yx=filter(b,1,x);                 % or (b) filter signal 
