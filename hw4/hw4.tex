@@ -118,7 +118,7 @@
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 4.21 (page 78)
+% PROBLEM 4.21 (page 78) --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 4.21}
 
@@ -138,13 +138,25 @@ For part (a) use \(n=0.1*(\cos(2*pi*f1*t) + \cos(2*\pi*f_2*t))\) to model narrow
 \begin{enumerate}[label=\alph*.]
     \item using this code:
     	\lstinputlisting[caption = {MATLAB code for Exercise 4.21a}, language = Matlab]{p4_21a.m}
+	the SNR at the input is 47 while the SNR at the output is 1906. Looking at the chart below, this makes sense because the noise falls outside of the desired passband range.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p4_21a} 
+		\caption{Figure 5.8}
+	\end{figure}
     \item using this code:
     	\lstinputlisting[caption = {MATLAB code for Exercise 4.21b}, language = Matlab]{p4_21b.m}
+	the SNR at the input is 97 while the SNR at the output is 68. Looking at the chart below, this makes sense because the noise falls inside of the desired passband range.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{p4_21b} 
+		\caption{Figure 5.8}
+	\end{figure}
 \end{enumerate}
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 5.9 (page 88) --- DONE-ish
+% PROBLEM 5.9 (page 88) --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 5.9}
 
@@ -153,7 +165,7 @@ For part (a) use \(n=0.1*(\cos(2*pi*f1*t) + \cos(2*\pi*f_2*t))\) to model narrow
 	\includegraphics[width=1\textwidth]{fig_5_8} 
 	\caption{Figure 5.8}
 \end{figure}
-Consider the system shown in Figure 5.8. Show that the output of the system is \(2A_0w(t)\cos(2\pi f_ct)\), as indicated.
+Consider the system shown in Figure 5.8. Show that the output of the system is \(2A_0w(t)\cos(2\pi f_ct)\), as indicated.\\
 
 %%%%%%%%%%%%%%
 % SOLUTION 5.9
@@ -178,9 +190,9 @@ output is \(2A_0w(t)\cos(2\pi f_ct)\)
 	\includegraphics[width=1\textwidth]{fig_5_9} 
 	\caption{Figure 5.9}
 \end{figure}
-Consider the transmission system of Figure 5.9. The message signal $w(t)$ has the magnitude spectrum shown in part (a). The transmitter in part (b) produces the transmitted signal x(t), which passes through the channel in part (c). The channel scales the signal and adds narrowband interferers to create the received signal r(t). The transmitter and channel parameters are φ1 = 0.3 radians, f1 = 24.1 kHz, f2 = 23.9 kHz, f3 = 27.5 kHz, f4 = 29.3 kHz, and f5 = 22.6 kHz. The receiver processing r(t) is shown in Figure 5.9(d). All bandpass and lowpass filters are considered ideal, with a gain of unity in the passband and zero in the stopband.
+Consider the transmission system of Figure 5.9. The message signal $w(t)$ has the magnitude spectrum shown in part (a). The transmitter in part (b) produces the transmitted signal x(t), which passes through the channel in part (c). The channel scales the signal and adds narrowband interferers to create the received signal r(t). The transmitter and channel parameters are $\phi_1$ = 0.3 radians, f1 = 24.1 kHz, f2 = 23.9 kHz, f3 = 27.5 kHz, f4 = 29.3 kHz, and f5 = 22.6 kHz. The receiver processing r(t) is shown in Figure 5.9(d). All bandpass and lowpass filters are considered ideal, with a gain of unity in the passband and zero in the stopband.
 \begin{enumerate}[label=\alph*.]
-    \item Sketch \(|R(f)|\) for −30 kHz $\leq$ f $\leq$ 30 kHz. Clearly indicate the amplitudes and frequencies of key points in the sketch.
+    \item Sketch \(|R(f)|\) for -30 kHz $\leq$ f $\leq$ 30 kHz. Clearly indicate the amplitudes and frequencies of key points in the sketch.
     \item Assume that $\phi_2$ is chosen to maximize the magnitude of $y(t)$ and reflects the value of $\phi_1$ and the delays imposed by the two ideal bandpass filters that form the received signal $r(t)$. Select the receiver parameters $f_6$, $f_7$, $f_8$, and $f_9$, so the receiver output $y(t)$ is a scaled version of $w(t)$.
 \end{enumerate}
 
@@ -188,12 +200,18 @@ Consider the transmission system of Figure 5.9. The message signal $w(t)$ has th
 % SOLUTION 5.12
 %%%%%%%%%%%%%%%
 \solution
-
-TODO
+\begin{enumerate}[label=\alph*.]
+	\item Sketch below
+    		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\textwidth]{5.12a} 
+			\caption{\(|R(f)|\) for -30 kHz $\leq$ f $\leq$ 30 kHz}
+   		\end{figure}
+   	\item $f_6$ = 24kHz $f_7$ = 27kHz $f_8$ = 0kHz $f_9$ = 30kHz
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 5.16 (page 92)
+% PROBLEM 5.16 (page 92) --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 5.16}
 
@@ -222,31 +240,31 @@ Consider the scheme shown in Figure 5.11. The absolute bandwidth of the baseband
     		min frequency = 150MHz and max frequency = 170MHz\\
 		absolute bandwidth = 20MHz
     \item \(x_5(t) = x_4(t)\cos(2\pi f_5t + \phi)\)\\
-    		WRONG\\
     		\(x_4(t) = x_3(t)\) from $f_3$ to $f_4$ and 0 otherwise\\
-		min frequency = 150MHz and max frequency = 160MHz\\
-		absolute bandwidth = 10MHz
-    \item \(x_6(t) = x_5(t)\) when < $f_6$ and 0 otherwise
+		min frequency = 150MHz and max frequency = 160MHz, abs bandwidth of $x_4(t)$=10MHz\\
+		absolute bandwidth of  $x_5(t)$ = 2 x 10MHz = 20MHz\\
+    \item \(x_6(t) = 0\) because $\phi=\pi/2$ means the output signal is attenuated by $\cos(\pi/2)=0$\\
+    		absolute bandwidth = 0
     \item The max frequency of $x_3(t)$ is 170MHz
-    \item The max frequency of $x_5(t)$ is ????
+    \item The max frequency of $x_5(t)$ is 102MHz
 \end{enumerate}
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QUESTION 5 
+% QUESTION 5 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Question 5}
 
 Consider the last line of AMlarge.m (see Listing 5.1):\\
 \(envv=(\pi/2)*filter(b,1,abs(v))\);\\
-Why is the output of the filter multiplied by the constant $\pi/2$? Justify your answer.
+Why is the output of the filter multiplied by the constant $\pi/2$? Justify your answer.\\
 
 %%%%%%%%%%%%%
 % SOLUTION Q5
 %%%%%%%%%%%%%
 \solution
 
-The output of the filter is multiplied by the constant $\pi/2$ FINISH EXPLANATION\\
+The output of the filter is multiplied by the constant $\pi/2$ to scale the output so that it rides on the crest of the wave. Because the output of the LPF is the average of the absolute value of a cos wave, $\pi/2$, the output must be scaled by this factor.\\
 \(envv=(\pi/2)*filter(b,1,abs(v))\)
 \begin{figure}[H]
 	\centering
@@ -264,28 +282,29 @@ The output of the filter is multiplied by the constant $\pi/2$ FINISH EXPLANATIO
 	\end{subfigure}
 	\label{fig:test}
 \end{figure}
-This becomes more clear when comparing the results to a non-multiplied filter output
+This becomes more clear when comparing the results to a non-multiplied filter output.
 \(envv=filter(b,1,abs(v))\)
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=.9\textwidth]{q5a}
+		\includegraphics[width=.9\textwidth]{q5b}
 		\caption{amplitude of signals}
 		\label{fig:sub1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=.9\textwidth]{q5a2}
+		\includegraphics[width=.9\textwidth]{q5b2}
 		\caption{overlay}
 		\label{fig:sub2}
 	\end{subfigure}
 	\label{fig:test}
 \end{figure}
+In these plots you can see the envelope (in black) drift below the message (in blue) such that it does not ride the crest of the modulated signal.  
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QUESTION 6 --- DONE-ish
+% QUESTION 6 --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Question 6}
 
@@ -316,26 +335,26 @@ Hints:
 
 \begin{enumerate}
 Using this code:
-\lstinputlisting[caption = {MATLAB code for Exercise 4.21a}, language = Matlab]{p4_21a.m}
+\lstinputlisting[caption = {MATLAB code for Exercise 4.21a}, language = Matlab]{q6.m}
 I was able to obtain these graphs
-    \item
+    \item graph below
     \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{q6a} 
 	\caption{the modulated signal v}
    \end{figure}
-    \item
+    \item graph below
     \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{q6b} 
-	\caption{the demodulated signals (before the LPF) $x_1$ and $x_2$}
+	\caption{the demodulated signals (before the LPF) $x_1$ and $m_1$}
    \end{figure}    
-    \item
-    \begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{q6c} 
-	\caption{the recovered signals (after the LPF) $m_1$ and $m_2$}
-   \end{figure}        
+    \item graph below
+    	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{q6c} 
+		\caption{the recovered signals (after the LPF) $x_2$ and $m_2$}
+   	\end{figure}        
 \end{enumerate}
 \pagebreak
 
