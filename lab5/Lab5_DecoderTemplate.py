@@ -101,6 +101,8 @@ print("binary data from {}: {}\n".format(filepath, bin_str))
 preamble="AABBCCDD"
 start=0
 
+print(bin_str.find('101010101011101111001100'))
+
 # Main loop
 while(True):
 	start, found = search_for_preamble(bin_str, preamble, start)
