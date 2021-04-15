@@ -1,4 +1,3 @@
-
 import os
 import time
 import random
@@ -95,35 +94,36 @@ You have access to some useful variables and functions:
 #################################
 # Get binary data from file
 bin_str = get_binary_file_data(filepath)
-print("binary data from {}: {}\n".format(filepath, bin_str))
-
-# Set up for loop
-preamble="AAB"
-start=0
-
-print(bin_str.find('101010101011101111001100'))
+#print("binary data from {}: {}\n".format(filepath, bin_str))
 
 # Main loop
+preamble='AABBCCDD'
+start=0
 while(True):
 	start, found = search_for_preamble(bin_str, preamble, start)
 	if (found):
-		print("found preamble {} at {}".format(preamble, start))
+		#print("found preamble {} at {}".format(preamble, start))
+
+		# Consume bytes for preamble
+		start, empty = get_bytes(bin_str, start, 4)
+
+		# Consume next byte "size"
+		start, size_bytes = get_bytes(bin_str, start, 1)
+		size_hex = bytes_to_hex(size_bytes)
+		size_dec = int(size_hex, 16)
+		#print(start)
+		#print(size_dec)
+
+		# Consume "size" bytes and store as message
+		start, message_hex = get_bytes(bin_str, start, size_dec)
+
+		# Decode message from hex to ascii
+		message_ascii = decode_hex(message_hex)
+
+		# Print the message
+		print(message_ascii)
 	else:
 		# Should be done reading
 		print("preamble not found")
 		quit()
 
-	# Consume bytes for preamble
-	get_bytes(bin_str, start, 4)
-
-	# Consume next byte "size"
-	start, size = get_bytes(bin_str, start, 1)
-
-	# Consume "size" bytes and store as message
-	start, message_ascii = get_bytes(bin_str, start, size)
-
-	# Decode message from hex to ascii
-	message_ascii = decode_dex(message_hex)
-
-	# Print the message
-	print(message_ascii)
