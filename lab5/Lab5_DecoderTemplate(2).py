@@ -94,11 +94,16 @@ You have access to some useful variables and functions:
 # MAIN
 #################################
 # Open file
-bin_file = open(filepath, "r")
+bin_file = open(filepath, "r", errors='ignore')
 # get single line msg from bin file 
-bin_str = bin_file.realine()
+bin_str = bin_file.readline()
+print(bin_str)
+print()
 
 # Check for preamble
 preamble="AABBCCDD"
 start=0
-search_for_preamble(bin_str, preamble, start)
+idx, found = search_for_preamble(bin_str, preamble, start)
+
+if (found):
+	print('got it')
