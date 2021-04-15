@@ -97,12 +97,31 @@ You have access to some useful variables and functions:
 bin_str = get_binary_file_data(filepath)
 print("binary data from {}: {}\n".format(filepath, bin_str))
 
-# Converto 
-
-# Check for preamble
+# Set up for loop
 preamble="AABBCCDD"
-#preamble_bits="
 start=0
-idx_, found = search_for_preamble(bin_str, preamble, start)
-if (found):
-	print('got it')
+
+# Main loop
+while(True):
+	start, found = search_for_preamble(bin_str, preamble, start)
+	if (found):
+		print("found preamble {} at {}".format(preamble, idx_))
+	else:
+		# Should be done reading
+		print("preamble not found")
+		quit()
+
+	# Consume bytes for preamble
+	get_bytes(bin_str, start, 4)
+
+	# Consume next byte "size"
+	start, size = get_bytes(bin_str, start, 1)
+
+	# Consume "size" bytes and store as message
+	start, message_ascii = get_bytes(bin_str, start, size)
+
+	# Decode message from hex to ascii
+	message_ascii = decode_dex(message_hex)
+
+	# Print the message
+	print(message_ascii)
