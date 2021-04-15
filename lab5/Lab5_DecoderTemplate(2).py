@@ -101,7 +101,7 @@ print(bin_str)
 print()
 
 # Check for preamble
-preamble="AABBCCDD"
+preamble="A"
 start=0
 idx, found = search_for_preamble(bin_str, preamble, start)
 
