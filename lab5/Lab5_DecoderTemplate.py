@@ -1,4 +1,4 @@
-import sys
+
 import os
 import time
 import random
@@ -98,7 +98,7 @@ bin_str = get_binary_file_data(filepath)
 print("binary data from {}: {}\n".format(filepath, bin_str))
 
 # Set up for loop
-preamble="AABBCCDD"
+preamble="AAB"
 start=0
 
 print(bin_str.find('101010101011101111001100'))
@@ -107,7 +107,7 @@ print(bin_str.find('101010101011101111001100'))
 while(True):
 	start, found = search_for_preamble(bin_str, preamble, start)
 	if (found):
-		print("found preamble {} at {}".format(preamble, idx_))
+		print("found preamble {} at {}".format(preamble, start))
 	else:
 		# Should be done reading
 		print("preamble not found")
