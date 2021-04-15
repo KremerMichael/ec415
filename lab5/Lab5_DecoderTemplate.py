@@ -124,6 +124,5 @@ while(True):
 		print(message_ascii)
 	else:
 		# Should be done reading
-		print("preamble not found")
 		quit()
 
