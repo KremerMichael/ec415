@@ -1,0 +1,226 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the beggining of this LaTeX document that serves as 
+% Homework Template for EC415, Spring 2019. The template was 
+% created by Natasa Trkulja (ntrkulja@bu.edu) and 
+% Prof. David Starobinski (staro@bu.edu). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+% PACKAGES
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[numbered,framed]{matlab-prettifier}
+\usepackage{hyperref}
+\usepackage{subcaption}
+
+\usetikzlibrary{automata,positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\rhead{\hmwkClass\ (\hmwkClassInstructor): \hmwkTitle}
+%\rhead{\firstxmark}
+%\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+%\newcommand{\enterProblemHeader}[1]{
+%    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%}
+%
+%\newcommand{\exitProblemHeader}[1]{
+%    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+%    \stepcounter{#1}
+%    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+%}
+
+%\setcounter{secnumdepth}{0}
+%\newcounter{partCounter}
+%\newcounter{homeworkProblemCounter}
+%\setcounter{homeworkProblemCounter}{1}
+%\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newcommand{\hmwkTitle}{Homework  5} % Be sure to update this as needed!
+\newcommand{\hmwkDueDate}{Friday 04/23/2021 6:00PM} % Be sure to update this as needed!
+\newcommand{\hmwkClass}{EC 415}
+\newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{Professor David Starobinski}
+\newcommand{\hmwkAuthorName}{Michael Kremer} % Be sure to update this!
+\newcommand{\hmwkKerberosName}{kremerme@bu.edu} % Be sure to update this!
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ by\ \hmwkDueDate\ }\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName} \\* \hmwkKerberosName}
+\date{}
+
+%\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Various Helper Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}   % Useful for algorithms
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)} % For derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}  % For partial derivatives
+\newcommand{\dx}{\mathrm{d}x}                               % Integral dx
+\newcommand{\solution}{\textbf{\large Solution}}            % Alias for the Solution section header
+\newcommand{\E}{\mathrm{E}}                                 % Probability commands: Expectation, 
+\newcommand{\Var}{\mathrm{Var}}                             %                       Variance,
+\newcommand{\Cov}{\mathrm{Cov}}                             %                       Covariance,
+\newcommand{\Bias}{\mathrm{Bias}}                           %                       Bias
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT REMOVE ANYTHING ABOVE THIS POINT. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN & TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 8.1 (page 154)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 8.1}
+
+The Matlab code in naivecode.m, which is on the website, implements the translation from binary to 4-PAM (and back again) suggested in (8.2). 
+Examine the resiliency of this translation to noise by plotting the number of errors as a function of the noise variance v. 
+What is the largest variance for which no errors occur? 
+At what variance are the errors near 50\%?\\
+
+%%%%%%%%%%%%%%
+% SOLUTION 8.1
+%%%%%%%%%%%%%%
+\solution
+
+TODO
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 8.2 (page 154)
+% (call your file graycode.m and upload it on Blackboard)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 8.2}
+
+A Gray code has the property that the binary representation for each symbol differs from its neighbors by exactly one bit.
+A Gray code for the translation of binary into 4-PAM is\\
+01 $\rightarrow$ +3\\ 
+11 $\rightarrow$ +1\\
+10 $\rightarrow$ −1\\
+00 $\rightarrow$ −3\\
+Mimic the code in naivecode.m to implement this alternative and plot the number of errors as a function of the noise variance v. Compare your answer with Exercise 8.1. Which code is better?\\
+
+%%%%%%%%%%%%%%
+% SOLUTION 8.2
+%%%%%%%%%%%%%%
+\solution
+
+TODO
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 8.5 (page 157)
+% (call your file betterpulseshape.m and upload it on Blackboard)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 8.5}
+
+Can you think of a pulse shape that will have a narrower bandwidth than either of the above but that will still be time limited by T ? 
+Implement it by changing the definition of ps, and check to see whether you are correct.\\
+
+%%%%%%%%%%%%%%
+% SOLUTION 8.5
+%%%%%%%%%%%%%%
+\solution
+
+TODO
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM 8.8 (page 160)
+% (run the code 5 times for each case) 
+% [You will be able to answer this question after the lecture of 04/20/2021]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Exercise 8.8}
+
+Rerun correx.m with different amounts of noise. Try sd=0, 0.1, 0.3, 0.5, 1, 2. 
+How large can the noise be made if the correlation is still to find the true location of the header?\\
+
+%%%%%%%%%%%%%%%
+% SOLUTION 8.8
+%%%%%%%%%%%%%%%
+\solution
+
+TODO
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Extra Question}
+
+TODO\\
+%%%%%%%%%%%%%
+% SOLUTION Q5
+%%%%%%%%%%%%%
+\solution
+
+TODO
+\pagebreak
+
+%%%%%%%%%%%%%%%
+% END
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% USEFUL THINGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% INSERT MATLAB CODE %%%%
+%\lstinputlisting[caption = {MATLAB code for Exercise 3.26b}, language = Matlab]{p3_26b.m}
+
+
+%%%% INSERT IMAGE %%%%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\textwidth]{p3_9a} 
+%	\caption{Passes all frequencies above 500 Hz}
+%\end{figure}
