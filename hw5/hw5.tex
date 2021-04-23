@@ -118,7 +118,7 @@
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 8.1 (page 154)
+% PROBLEM 8.1 (page 154) --- DONE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 8.1}
 
@@ -132,11 +132,19 @@ At what variance are the errors near 50\%?\\
 %%%%%%%%%%%%%%
 \solution
 
-TODO
+Using this code\\
+\lstinputlisting[caption = {MATLAB code for Exercise 8.1}, language = Matlab]{p8_1.m}
+the following plot was generated.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p8_1} 
+	\caption{number of errors as a function of the noise variance v}
+\end{figure}
+From this we can see that the errors can be greater than 50\% as soon as variance reaches about 300, but from the long term trend, the error count only approaches 50\% on average.
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 8.2 (page 154)
+% PROBLEM 8.2 (page 154) --- DONE
 % (call your file graycode.m and upload it on Blackboard)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 8.2}
@@ -145,8 +153,8 @@ A Gray code has the property that the binary representation for each symbol diff
 A Gray code for the translation of binary into 4-PAM is\\
 01 $\rightarrow$ +3\\ 
 11 $\rightarrow$ +1\\
-10 $\rightarrow$ −1\\
-00 $\rightarrow$ −3\\
+10 $\rightarrow$ -1\\
+00 $\rightarrow$ -3\\
 Mimic the code in naivecode.m to implement this alternative and plot the number of errors as a function of the noise variance v. Compare your answer with Exercise 8.1. Which code is better?\\
 
 %%%%%%%%%%%%%%
@@ -154,11 +162,19 @@ Mimic the code in naivecode.m to implement this alternative and plot the number 
 %%%%%%%%%%%%%%
 \solution
 
-TODO
+Using this code:\\
+\lstinputlisting[caption = {MATLAB code for Exercise 8.2}, language = Matlab]{graycode.m}
+the following plot was generated.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p8_2} 
+	\caption{number of errors as a function of the noise variance v}
+\end{figure}
+By comparing this plot to the plot generated in Exercise 8.1, we can see that using a Gray code translation reduces the error count. This is to be expected since Gray code sequential transitions are more similar.
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM 8.5 (page 157)
+% PROBLEM 8.5 (page 157) --- DONE
 % (call your file betterpulseshape.m and upload it on Blackboard)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 8.5}
@@ -171,7 +187,15 @@ Implement it by changing the definition of ps, and check to see whether you are 
 %%%%%%%%%%%%%%
 \solution
 
-TODO
+Using this code:\\
+\lstinputlisting[caption = {MATLAB code for Exercise 8.5}, language = Matlab]{betterpulseshape.m}
+the following plot was generated.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{p8_5} 
+	\caption{The waveform representing "Transmit this text"}
+\end{figure}
+In this solution a sinc pulse shape was used because it is the most efficient pulse shape.
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -189,6 +213,58 @@ How large can the noise be made if the correlation is still to find the true loc
 %%%%%%%%%%%%%%%
 \solution
 
+Using this code:\\
+\lstinputlisting[caption = {MATLAB code for Exercise 8.8}, language = Matlab]{p8_8.m}
+the following plots were generated.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p8_8_0}
+		\caption{sd=0}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p8_8_01}
+		\caption{sd=0.1}
+		\label{fig:sub2}
+	\end{subfigure}
+	\label{fig:test}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p8_8_03}
+		\caption{sd=0.3}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p8_8_05}
+		\caption{sd=0.5}
+		\label{fig:sub2}
+	\end{subfigure}
+	\label{fig:test}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p8_8_1}
+		\caption{sd=1}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{p8_8_2}
+		\caption{sd=2}
+		\label{fig:sub2}
+	\end{subfigure}
+	\label{fig:test}
+\end{figure}
+
 TODO
 \pagebreak
 
@@ -196,14 +272,18 @@ TODO
 % QUESTION 5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Extra Question}
-
-TODO\\
+\\
 %%%%%%%%%%%%%
 % SOLUTION Q5
 %%%%%%%%%%%%%
 \solution
 
-TODO
+First, this code was used to convert a given ASCII string into QPSK symbols:\\
+\lstinputlisting[caption = {MATLAB code for Problem 5}, language = Matlab]{letters2QPSK.m}
+TODO:EXPLAIN\\
+Then, this code was used to convert a given ASCII string into a QPSK modulated passband signal:\\
+\lstinputlisting[caption = {MATLAB code for Problem 5}, language = Matlab]{QPSK_modulation.m}
+TODO:EXPLAIN
 \pagebreak
 
 %%%%%%%%%%%%%%%

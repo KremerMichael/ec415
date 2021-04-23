@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  20 APR 2021 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  22 APR 2021 20:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -723,7 +723,38 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count310
 \l__pdf_internal_box=\box83
 )
-(./hw5.aux)
+(./hw5.aux
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+)
 \openout1 = `hw5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
@@ -808,75 +839,164 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--129
 
  []
 
-[2]
+(/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
-./hw5.tex:148: Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
+ []
 
-See the inputenc package documentation for explanation.
+(./p8_1.m [2]
+Overfull \hbox (82.25063pt too wide) in paragraph at lines 55--56
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+)
+<p8_1.jpg, id=65, 1124.2pt x 843.15pt>
+File: p8_1.jpg Graphic file (type jpg)
+<use p8_1.jpg>
+Package pdftex.def Info: p8_1.jpg  used on input line 140.
+(pdftex.def)             Requested size: 469.75499pt x 352.30656pt.
+ [3] [4 <./p8_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 152--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+(./graycode.m [5]
+Overfull \hbox (82.25063pt too wide) in paragraph at lines 53--54
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+)
+<p8_2.jpg, id=136, 1124.2pt x 843.15pt>
+File: p8_2.jpg Graphic file (type jpg)
+<use p8_2.jpg>
+Package pdftex.def Info: p8_2.jpg  used on input line 170.
+(pdftex.def)             Requested size: 469.75499pt x 352.30656pt.
+ [6] [7 <./p8_2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
+ []
+
+(./betterpulseshape.m)
+<p8_5.jpg, id=168, 1124.2pt x 843.15pt>
+File: p8_5.jpg Graphic file (type jpg)
+<use p8_5.jpg>
+Package pdftex.def Info: p8_5.jpg  used on input line 195.
+(pdftex.def)             Requested size: 469.75499pt x 352.30656pt.
+ [8] [9 <./p8_5.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
+(./p8_8.m)
+<p8_8_0.jpg, id=191, 1124.2pt x 843.15pt>
+File: p8_8_0.jpg Graphic file (type jpg)
+<use p8_8_0.jpg>
+Package pdftex.def Info: p8_8_0.jpg  used on input line 223.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p8_8_01.jpg, id=192, 1124.2pt x 843.15pt>
+File: p8_8_01.jpg Graphic file (type jpg)
+<use p8_8_01.jpg>
+Package pdftex.def Info: p8_8_01.jpg  used on input line 229.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p8_8_03.jpg, id=193, 1124.2pt x 843.15pt>
+File: p8_8_03.jpg Graphic file (type jpg)
+<use p8_8_03.jpg>
+Package pdftex.def Info: p8_8_03.jpg  used on input line 239.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p8_8_05.jpg, id=194, 1124.2pt x 843.15pt>
+File: p8_8_05.jpg Graphic file (type jpg)
+<use p8_8_05.jpg>
+Package pdftex.def Info: p8_8_05.jpg  used on input line 245.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p8_8_1.jpg, id=195, 1124.2pt x 843.15pt>
+File: p8_8_1.jpg Graphic file (type jpg)
+<use p8_8_1.jpg>
+Package pdftex.def Info: p8_8_1.jpg  used on input line 255.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+<p8_8_2.jpg, id=196, 1124.2pt x 843.15pt>
+File: p8_8_2.jpg Graphic file (type jpg)
+<use p8_8_2.jpg>
+Package pdftex.def Info: p8_8_2.jpg  used on input line 261.
+(pdftex.def)             Requested size: 211.38829pt x 158.54051pt.
+ [10 <./p8_8_0.jpg> <./p8_8_01.jpg>] [11 <./p8_8_03.jpg> <./p8_8_05.jpg> <./p8_
+8_1.jpg> <./p8_8_2.jpg>]
+
+./hw5.tex:279: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148 10 $\rightarrow$ −
-                          1\\
+l.279 \solution
+               
 ? s
 OK, entering \scrollmode...
 
-./hw5.tex:149: Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.149 00 $\rightarrow$ −
-                          3\\
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--151
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
+(./letters2QPSK.m)
+Underfull \hbox (badness 10000) in paragraph at lines 283--285
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
-
- []
-
-[5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
+(./QPSK_modulation.m [12]) [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
  (./hw5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
 Package rerunfilecheck Info: File `hw5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
  ) 
 Here is how much of TeX's memory you used:
- 20490 strings out of 480608
- 388868 string characters out of 5903631
- 644260 words of memory out of 5000000
- 35972 multiletter control sequences out of 15000+600000
- 541154 words of font info for 58 fonts, out of 8000000 for 9000
+ 21731 strings out of 480608
+ 402604 string characters out of 5903631
+ 846922 words of memory out of 5000000
+ 36958 multiletter control sequences out of 15000+600000
+ 542212 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,66p,413b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw5.pdf (6 pages, 77193 bytes).
+ 60i,12n,66p,413b,2397s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on hw5.pdf (13 pages, 878407 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 394 PDF objects out of 1000 (max. 8388607)
+ 356 compressed objects within 4 object streams
+ 239 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
