@@ -265,7 +265,7 @@ the following plots were generated.
 	\label{fig:test}
 \end{figure}
 
-TODO
+From the above plots it seems like the noise can be set to sd=0.1 before the true location of the header becomes hidden.
 \pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -280,10 +280,10 @@ TODO
 
 First, this code was used to convert a given ASCII string into QPSK symbols:\\
 \lstinputlisting[caption = {MATLAB code for Problem 5}, language = Matlab]{letters2QPSK.m}
-TODO:EXPLAIN\\
+The first thing the above code does is convert an ascii input into binary. Some manipulation has to be done to append a leading zero and write all values as on vector. Once the vector of binary values is created, I run a loop looking at two bit values to determine the value of m. After m is determined, the value is used to calculate the QPSK symbols and write them to an output vector.\\
 Then, this code was used to convert a given ASCII string into a QPSK modulated passband signal:\\
 \lstinputlisting[caption = {MATLAB code for Problem 5}, language = Matlab]{QPSK_modulation.m}
-TODO:EXPLAIN
+I did not get the above code working for part two.
 \pagebreak
 
 %%%%%%%%%%%%%%%
