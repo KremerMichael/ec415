@@ -6,7 +6,7 @@
 #
 # GNU Radio Python Flow Graph
 # Title: Not titled yet
-# GNU Radio version: v3.8.2.0-56-gc7a096b8
+# GNU Radio version: v3.8.2.0-59-gd2129cff
 
 from distutils.version import StrictVersion
 
@@ -91,6 +91,13 @@ class lab5_gfsk_demod(gr.top_block, Qt.QWidget):
         self._fsk_deviation_hz_line_edit.returnPressed.connect(
             lambda: self.set_fsk_deviation_hz(int(str(self._fsk_deviation_hz_line_edit.text()))))
         self.top_grid_layout.addWidget(self._fsk_deviation_hz_tool_bar)
+        self._carrier_freq_tool_bar = Qt.QToolBar(self)
+        self._carrier_freq_tool_bar.addWidget(Qt.QLabel('carrier_freq' + ": "))
+        self._carrier_freq_line_edit = Qt.QLineEdit(str(self.carrier_freq))
+        self._carrier_freq_tool_bar.addWidget(self._carrier_freq_line_edit)
+        self._carrier_freq_line_edit.returnPressed.connect(
+            lambda: self.set_carrier_freq(int(str(self._carrier_freq_line_edit.text()))))
+        self.top_grid_layout.addWidget(self._carrier_freq_tool_bar)
         self.qtgui_waterfall_sink_x_0 = qtgui.waterfall_sink_c(
             1024, #size
             firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -211,7 +218,7 @@ class lab5_gfsk_demod(gr.top_block, Qt.QWidget):
 
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win)
-        self.freq_xlating_fir_filter_xxx_0 = filter.freq_xlating_fir_filter_ccc(1, firdes.low_pass(1, samp_rate, filter_cutoff, filter_transition), 0, samp_rate)
+        self.freq_xlating_fir_filter_xxx_0 = filter.freq_xlating_fir_filter_ccc(1, firdes.low_pass(1, samp_rate, filter_cutoff, filter_transition), carrier_freq, samp_rate)
         self.digital_gfsk_demod_0 = digital.gfsk_demod(
             samples_per_symbol=samples_per_second,
             sensitivity=samp_rate/(2*math.pi*fsk_deviation_hz),
@@ -221,13 +228,6 @@ class lab5_gfsk_demod(gr.top_block, Qt.QWidget):
             freq_error=0.0,
             verbose=False,
             log=False)
-        self._carrier_freq_tool_bar = Qt.QToolBar(self)
-        self._carrier_freq_tool_bar.addWidget(Qt.QLabel('carrier_freq' + ": "))
-        self._carrier_freq_line_edit = Qt.QLineEdit(str(self.carrier_freq))
-        self._carrier_freq_tool_bar.addWidget(self._carrier_freq_line_edit)
-        self._carrier_freq_line_edit.returnPressed.connect(
-            lambda: self.set_carrier_freq(int(str(self._carrier_freq_line_edit.text()))))
-        self.top_grid_layout.addWidget(self._carrier_freq_tool_bar)
         self.blocks_unpacked_to_packed_xx_0 = blocks.unpacked_to_packed_bb(1, gr.GR_MSB_FIRST)
         self.blocks_uchar_to_float_0 = blocks.uchar_to_float()
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_gr_complex*1, '/ad/eng/users/k/r/kremerme/Desktop/ec415/lab5/lab5_gfsk(1).iq', False, 0, 0)
@@ -299,6 +299,7 @@ class lab5_gfsk_demod(gr.top_block, Qt.QWidget):
     def set_carrier_freq(self, carrier_freq):
         self.carrier_freq = carrier_freq
         Qt.QMetaObject.invokeMethod(self._carrier_freq_line_edit, "setText", Qt.Q_ARG("QString", str(self.carrier_freq)))
+        self.freq_xlating_fir_filter_xxx_0.set_center_freq(self.carrier_freq)
 
 
 

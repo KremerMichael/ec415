@@ -212,7 +212,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    center_freq: '0'
+    center_freq: carrier_freq
     comment: ''
     decim: '1'
     maxoutbuf: '0'
