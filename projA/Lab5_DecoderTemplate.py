@@ -102,7 +102,7 @@ start=0
 while(True):
 	start, found = search_for_preamble(bin_str, preamble, start)
 	if (found):
-		#print("found preamble {} at {}".format(preamble, start))
+		print("found preamble {} at {}".format(preamble, start))
 
 		# Consume bytes for preamble
 		start, empty = get_bytes(bin_str, start, 4)
@@ -111,8 +111,8 @@ while(True):
 		start, size_bytes = get_bytes(bin_str, start, 1)
 		size_hex = bytes_to_hex(size_bytes)
 		size_dec = int(size_hex, 16)
-		#print(start)
-		#print(size_dec)
+		print(start)
+		print(size_dec)
 
 		# Consume "size" bytes and store as message
 		start, message_hex = get_bytes(bin_str, start, size_dec)
@@ -125,4 +125,3 @@ while(True):
 	else:
 		# Should be done reading
 		quit()
-

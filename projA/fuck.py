@@ -3,7 +3,6 @@ import os
 import time
 import random
 import zlib
-import struct
 
 import argparse
 
@@ -17,8 +16,8 @@ print("File path = \"" + filepath + "\"")
 
 # Given a filepath, returns the binary content of the file
 def get_binary_file_data(filepath):
-        try:
-		f = open(args.filepath, 'rb')
+    try:
+        f = open(args.filepath, 'rb')
 		bits = f.read()
 		f.close()
 	except IOError as e:
@@ -76,11 +75,11 @@ def check_crc(msg, crc):
     return crc2 == calc_crc
 
 def ascii_to_hex(ascii_str):
-  hex_str = ""
-  for c in ascii_str:
-    hex_value = hex(ord(c))[2:]
-    hex_str += hex_value if len(hex_value) == 2 else f'0{hex_value}'
-  return hex_str
+    hex_str = ""
+    for c in ascii_str:
+        hex_value = hex(ord(c))[2:]
+        hex_str += hex_value if len(hex_value) == 2 else f'0{hex_value}'
+    return hex_str
 
 """ ******************************************************* """
 """			Your Implementation Goes Below This Line		"""
@@ -156,10 +155,10 @@ while(True):
         start, crc = get_bytes(bin_str, start, 4)
 
         #check if the payload matches the crc
-        #if(check_crc(msg, crc)):
-        print("crc good")
-        #else:
-        print("ddd")
+        if(check_crc(msg, crc)):
+            print("crc good")
+        else:
+            print("ddd")
     else:
         # Should be done reading
         quit()
