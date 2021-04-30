@@ -147,7 +147,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: /ad/eng/users/k/r/kremerme/Desktop/ec415/projA/M2_ReceiverFlowgraphCheck(1).iq
+    file: /ad/eng/users/k/r/kremerme/Desktop/ec415/projB/TransmitTest_p1.iq
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
