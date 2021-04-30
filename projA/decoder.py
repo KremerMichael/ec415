@@ -158,7 +158,7 @@ while(True):
         if(check_crc(message_ascii, crc)):
             print("crc good")
         else:
-            print("ddd")
+            print("crc bad")
     else:
         # Should be done reading
         quit()
