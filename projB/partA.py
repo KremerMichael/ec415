@@ -25,6 +25,7 @@ from gnuradio import eng_notation
 from gnuradio import qtgui
 from gnuradio.filter import firdes
 import sip
+from gnuradio import analog
 from gnuradio import blocks
 import pmt
 from gnuradio import digital
@@ -91,6 +92,13 @@ class partA(gr.top_block, Qt.QWidget):
         self._fsk_deviation_hz_line_edit.returnPressed.connect(
             lambda: self.set_fsk_deviation_hz(int(str(self._fsk_deviation_hz_line_edit.text()))))
         self.top_grid_layout.addWidget(self._fsk_deviation_hz_tool_bar)
+        self._carrier_freq_tool_bar = Qt.QToolBar(self)
+        self._carrier_freq_tool_bar.addWidget(Qt.QLabel('carrier_freq' + ": "))
+        self._carrier_freq_line_edit = Qt.QLineEdit(str(self.carrier_freq))
+        self._carrier_freq_tool_bar.addWidget(self._carrier_freq_line_edit)
+        self._carrier_freq_line_edit.returnPressed.connect(
+            lambda: self.set_carrier_freq(int(str(self._carrier_freq_line_edit.text()))))
+        self.top_grid_layout.addWidget(self._carrier_freq_tool_bar)
         self.qtgui_waterfall_sink_x_1 = qtgui.waterfall_sink_c(
             1024, #size
             firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -171,36 +179,76 @@ class partA(gr.top_block, Qt.QWidget):
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win)
+        self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
+            1024, #size
+            firdes.WIN_BLACKMAN_hARRIS, #wintype
+            0, #fc
+            samp_rate, #bw
+            'FFT of IQ Source', #name
+            1
+        )
+        self.qtgui_freq_sink_x_0.set_update_time(0.10)
+        self.qtgui_freq_sink_x_0.set_y_axis(-140, 10)
+        self.qtgui_freq_sink_x_0.set_y_label('Relative Gain', 'dB')
+        self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
+        self.qtgui_freq_sink_x_0.enable_autoscale(True)
+        self.qtgui_freq_sink_x_0.enable_grid(False)
+        self.qtgui_freq_sink_x_0.set_fft_average(1.0)
+        self.qtgui_freq_sink_x_0.enable_axis_labels(True)
+        self.qtgui_freq_sink_x_0.enable_control_panel(False)
+
+
+
+        labels = ['', '', '', '', '',
+            '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+            "magenta", "yellow", "dark red", "dark green", "dark blue"]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+            1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in range(1):
+            if len(labels[i]) == 0:
+                self.qtgui_freq_sink_x_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_freq_sink_x_0.set_line_label(i, labels[i])
+            self.qtgui_freq_sink_x_0.set_line_width(i, widths[i])
+            self.qtgui_freq_sink_x_0.set_line_color(i, colors[i])
+            self.qtgui_freq_sink_x_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
+        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win)
         self.digital_gfsk_mod_0 = digital.gfsk_mod(
             samples_per_symbol=2,
             sensitivity=1/(samp_rate/(2*math.pi*fsk_deviation_hz)),
             bt=0.35,
             verbose=False,
             log=False)
-        self._carrier_freq_tool_bar = Qt.QToolBar(self)
-        self._carrier_freq_tool_bar.addWidget(Qt.QLabel('carrier_freq' + ": "))
-        self._carrier_freq_line_edit = Qt.QLineEdit(str(self.carrier_freq))
-        self._carrier_freq_tool_bar.addWidget(self._carrier_freq_line_edit)
-        self._carrier_freq_line_edit.returnPressed.connect(
-            lambda: self.set_carrier_freq(int(str(self._carrier_freq_line_edit.text()))))
-        self.top_grid_layout.addWidget(self._carrier_freq_tool_bar)
         self.blocks_uchar_to_float_1 = blocks.uchar_to_float()
         self.blocks_packed_to_unpacked_xx_0 = blocks.packed_to_unpacked_bb(1, gr.GR_MSB_FIRST)
+        self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_file_source_1 = blocks.file_source(gr.sizeof_char*1, '/ad/eng/users/k/r/kremerme/Desktop/ec415/projB/M4_TransmitterFlowgraphCheck.bin', False, 0, 0)
         self.blocks_file_source_1.set_begin_tag(pmt.PMT_NIL)
         self.blocks_file_sink_1 = blocks.file_sink(gr.sizeof_gr_complex*1, '/ad/eng/users/k/r/kremerme/Desktop/ec415/projB/TransmitTest_p1.iq', False)
         self.blocks_file_sink_1.set_unbuffered(False)
+        self.blocks_add_const_vxx_0 = blocks.add_const_cc(0)
+        self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate, analog.GR_COS_WAVE, carrier_freq, 1, 0, 0)
 
 
 
         ##################################################
         # Connections
         ##################################################
+        self.connect((self.analog_sig_source_x_0, 0), (self.blocks_multiply_xx_0, 1))
+        self.connect((self.blocks_add_const_vxx_0, 0), (self.blocks_multiply_xx_0, 0))
         self.connect((self.blocks_file_source_1, 0), (self.blocks_packed_to_unpacked_xx_0, 0))
+        self.connect((self.blocks_multiply_xx_0, 0), (self.blocks_file_sink_1, 0))
+        self.connect((self.blocks_multiply_xx_0, 0), (self.qtgui_freq_sink_x_0, 0))
         self.connect((self.blocks_packed_to_unpacked_xx_0, 0), (self.blocks_uchar_to_float_1, 0))
         self.connect((self.blocks_packed_to_unpacked_xx_0, 0), (self.digital_gfsk_mod_0, 0))
         self.connect((self.blocks_uchar_to_float_1, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.digital_gfsk_mod_0, 0), (self.blocks_file_sink_1, 0))
+        self.connect((self.digital_gfsk_mod_0, 0), (self.blocks_add_const_vxx_0, 0))
         self.connect((self.digital_gfsk_mod_0, 0), (self.qtgui_waterfall_sink_x_1, 0))
 
 
@@ -220,6 +268,8 @@ class partA(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
+        self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
+        self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.qtgui_waterfall_sink_x_1.set_frequency_range(0, self.samp_rate)
 
@@ -254,6 +304,7 @@ class partA(gr.top_block, Qt.QWidget):
     def set_carrier_freq(self, carrier_freq):
         self.carrier_freq = carrier_freq
         Qt.QMetaObject.invokeMethod(self._carrier_freq_line_edit, "setText", Qt.Q_ARG("QString", str(self.carrier_freq)))
+        self.analog_sig_source_x_0.set_frequency(self.carrier_freq)
 
 
 

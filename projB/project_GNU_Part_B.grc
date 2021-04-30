@@ -122,6 +122,46 @@ blocks:
     coordinate: [378, 90]
     rotation: 0
     state: true
+- name: analog_sig_source_x_0
+  id: analog_sig_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '1'
+    comment: ''
+    freq: carrier_freq
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate
+    type: complex
+    waveform: analog.GR_COS_WAVE
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [778, 408]
+    rotation: 0
+    state: true
+- name: blocks_add_const_vxx_0
+  id: blocks_add_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [789, 209]
+    rotation: 0
+    state: true
 - name: blocks_file_sink_1
   id: blocks_file_sink
   parameters:
@@ -137,7 +177,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1139, 192]
+    coordinate: [1185, 192]
     rotation: 0
     state: true
 - name: blocks_file_source_1
@@ -160,6 +200,24 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [29, 184]
+    rotation: 0
+    state: true
+- name: blocks_multiply_xx_0
+  id: blocks_multiply_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [985, 203]
     rotation: 0
     state: true
 - name: blocks_packed_to_unpacked_xx_0
@@ -216,26 +274,6 @@ blocks:
     coordinate: [560, 193]
     rotation: 0
     state: true
-- name: freq_xlating_fir_filter_xxx_0_0
-  id: freq_xlating_fir_filter_xxx
-  parameters:
-    affinity: ''
-    alias: ''
-    center_freq: carrier_freq
-    comment: ''
-    decim: '1'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    samp_rate: samp_rate
-    taps: firdes.low_pass(1, samp_rate, filter_cutoff, filter_transition)
-    type: ccc
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [825, 55]
-    rotation: 0
-    state: disabled
 - name: import_0
   id: import
   parameters:
@@ -249,7 +287,7 @@ blocks:
     coordinate: [192, 19]
     rotation: 0
     state: true
-- name: qtgui_freq_sink_x_1
+- name: qtgui_freq_sink_x_0
   id: qtgui_freq_sink_x
   parameters:
     affinity: ''
@@ -264,7 +302,7 @@ blocks:
     alpha7: '1.0'
     alpha8: '1.0'
     alpha9: '1.0'
-    autoscale: 'False'
+    autoscale: 'True'
     average: '1.0'
     axislabels: 'True'
     bw: samp_rate
@@ -299,7 +337,7 @@ blocks:
     legend: 'True'
     maxoutbuf: '0'
     minoutbuf: '0'
-    name: '""'
+    name: FFT of IQ Source
     nconnections: '1'
     showports: 'False'
     tr_chan: '0'
@@ -326,9 +364,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [835, 346]
-    rotation: 180
-    state: disabled
+    coordinate: [1171, 360]
+    rotation: 0
+    state: true
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
   parameters:
@@ -484,18 +522,21 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [529, 323]
+    coordinate: [541, 335]
     rotation: 180
     state: true
 
 connections:
+- [analog_sig_source_x_0, '0', blocks_multiply_xx_0, '1']
+- [blocks_add_const_vxx_0, '0', blocks_multiply_xx_0, '0']
 - [blocks_file_source_1, '0', blocks_packed_to_unpacked_xx_0, '0']
+- [blocks_multiply_xx_0, '0', blocks_file_sink_1, '0']
+- [blocks_multiply_xx_0, '0', qtgui_freq_sink_x_0, '0']
 - [blocks_packed_to_unpacked_xx_0, '0', blocks_uchar_to_float_1, '0']
 - [blocks_packed_to_unpacked_xx_0, '0', digital_gfsk_mod_0, '0']
 - [blocks_uchar_to_float_1, '0', qtgui_time_sink_x_0, '0']
-- [digital_gfsk_mod_0, '0', blocks_file_sink_1, '0']
+- [digital_gfsk_mod_0, '0', blocks_add_const_vxx_0, '0']
 - [digital_gfsk_mod_0, '0', qtgui_waterfall_sink_x_1, '0']
-- [freq_xlating_fir_filter_xxx_0_0, '0', qtgui_freq_sink_x_1, '0']
 
 metadata:
   file_format: 1
