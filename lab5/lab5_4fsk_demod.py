@@ -6,7 +6,7 @@
 #
 # GNU Radio Python Flow Graph
 # Title: Not titled yet
-# GNU Radio version: v3.8.2.0-56-gc7a096b8
+# GNU Radio version: 3.8.2.0
 
 from distutils.version import StrictVersion
 
@@ -75,7 +75,7 @@ class lab5_4fsk_demod(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.fsk_deviation_hz = fsk_deviation_hz = 5000
-        self.samples_per_second = samples_per_second = 200
+        self.samples_per_symbol = samples_per_symbol = 200
         self.samp_rate = samp_rate = 4e5
         self.filter_transition = filter_transition = 750
         self.filter_cutoff = filter_cutoff = 3.5*fsk_deviation_hz
@@ -228,11 +228,11 @@ class lab5_4fsk_demod(gr.top_block, Qt.QWidget):
         self.top_grid_layout.addWidget(self._carrier_freq_tool_bar)
         self.blocks_unpacked_to_packed_xx_0 = blocks.unpacked_to_packed_bb(2, gr.GR_MSB_FIRST)
         self.blocks_uchar_to_float_0 = blocks.uchar_to_float()
-        self.blocks_keep_one_in_n_0 = blocks.keep_one_in_n(gr.sizeof_char*1, samples_per_second)
+        self.blocks_keep_one_in_n_0 = blocks.keep_one_in_n(gr.sizeof_char*1, samples_per_symbol)
         self.blocks_float_to_char_0 = blocks.float_to_char(1, 0.5)
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_gr_complex*1, '/ad/eng/users/k/r/kremerme/Desktop/ec415/lab5/lab5_4fsk(1).iq', False, 0, 0)
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_gr_complex*1, '/home/gnuradio/ec415/lab5/lab5_4fsk(1).iq', False, 0, 0)
         self.blocks_file_source_0.set_begin_tag(pmt.PMT_NIL)
-        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, '/ad/eng/users/k/r/kremerme/Desktop/ec415/lab5/4fsk_out.bin', False)
+        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, '/home/gnuradio/ec415/lab5/4fsk_out.bin', False)
         self.blocks_file_sink_0.set_unbuffered(True)
         self.blocks_add_const_vxx_0 = blocks.add_const_ff(3)
         self.analog_quadrature_demod_cf_0 = analog.quadrature_demod_cf(samp_rate/(2*math.pi*fsk_deviation_hz))
@@ -269,12 +269,12 @@ class lab5_4fsk_demod(gr.top_block, Qt.QWidget):
         Qt.QMetaObject.invokeMethod(self._fsk_deviation_hz_line_edit, "setText", Qt.Q_ARG("QString", str(self.fsk_deviation_hz)))
         self.analog_quadrature_demod_cf_0.set_gain(self.samp_rate/(2*math.pi*self.fsk_deviation_hz))
 
-    def get_samples_per_second(self):
-        return self.samples_per_second
+    def get_samples_per_symbol(self):
+        return self.samples_per_symbol
 
-    def set_samples_per_second(self, samples_per_second):
-        self.samples_per_second = samples_per_second
-        self.blocks_keep_one_in_n_0.set_n(self.samples_per_second)
+    def set_samples_per_symbol(self, samples_per_symbol):
+        self.samples_per_symbol = samples_per_symbol
+        self.blocks_keep_one_in_n_0.set_n(self.samples_per_symbol)
 
     def get_samp_rate(self):
         return self.samp_rate
